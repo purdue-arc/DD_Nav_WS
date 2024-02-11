@@ -1,5 +1,5 @@
 // Includes
-#include "header.hh"
+#include "../header.hh"
 
 
 // Initializes a node with given values

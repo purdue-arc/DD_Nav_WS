@@ -1,5 +1,5 @@
 // Imports
-#include "header.hh"
+#include "../header.hh"
 
 
 // Given number of rows, cols, and occupancy map, initialized nodes per path finding algo.

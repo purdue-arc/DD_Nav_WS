@@ -1,5 +1,5 @@
 // Imports
-#include "../header.hh";
+#include "../header.hh"
 
 
 // Tests the AStar algorithm
@@ -32,21 +32,21 @@ void test_AStar(const char *out_file_name, bool input_file_exists, const char* i
 		return;
 	}
 	
-	// Setting up for the test
-	Dijkstra test = Dijkstra(maze, nrows, ncols);
-
-	// Running the test
-	auto start = high_resolution_clock::now();
-	vector<tuple<int, int>> path = test.generate_path();
-	auto stop = high_resolution_clock::now();
-	auto duration = duration_cast<microseconds>(stop - start);
-	cout << "Time taken by the Dijkstra: " << duration.count() << endl; //Need to confirm that the .count() function works as it was previously duration
+	// // Setting up for the test
+	// Dijkstra test = Dijkstra(maze, nrows, ncols);
+	// cout << "Initialized Dijkstra!!!\n" << endl;
+	// // Running the test
+	// auto start = high_resolution_clock::now();
+	// vector<tuple<int, int>> path = test.generate_path();
+	// auto stop = high_resolution_clock::now();
+	// auto duration = duration_cast<microseconds>(stop - start);
+	// cout << "Time taken by the Dijkstra: " << duration.count() << endl; //Need to confirm that the .count() function works as it was previously duration
 
 	AStar test1 = AStar(maze, nrows, ncols);
-	start = high_resolution_clock::now();
-	path = test1.generate_path();
-	stop = high_resolution_clock::now();
-	duration = duration_cast<microseconds>(stop - start);
+	auto start = high_resolution_clock::now();
+	vector<tuple<int, int>> path = test1.generate_path();
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
 	cout << "Time taken by the AStar: " << duration.count() << endl;
 
 	DStar test2 = DStar(maze, nrows, ncols);
@@ -56,14 +56,14 @@ void test_AStar(const char *out_file_name, bool input_file_exists, const char* i
 	duration = duration_cast<microseconds>(stop - start);
 	cout << "Time taken by the DStar: " << duration.count() << endl;
 
-	// Writing out the results
-	cout << "Time taken by the program: " << duration.count() << endl;
-	if (path.size() != 0) {
-		write_maze_sol(out_file, test.get_node_map(), path, nrows, ncols);
-	}
-	else {
-		printf("No paths exist to get to the goal location.\n");
-	}
+	// // Writing out the results
+	// cout << "Time taken by the program: " << duration.count() << endl;
+	// if (path.size() != 0) {
+	// 	write_maze_sol(out_file, test.get_node_map(), path, nrows, ncols);
+	// }
+	// else {
+	// 	printf("No paths exist to get to the goal location.\n");
+	// }
 
 	// Cleaning up resources
 	fclose(out_file);
@@ -117,10 +117,10 @@ void test_DStar(const char* out_file_name, bool input_file_exists, const char* i
 
 			distance += sqrt(pow((std::get<0>(a) - std::get<0>(b)), 2) + pow((std::get<1>(a) - std::get<1>(b)), 2));
 		}
-		printf("Distance: %.2f", distance);
+		printf("Distance: %.2f\n", distance);
 
 		write_maze_sol(out_file, test.get_node_map(), path, nrows, ncols);
-		printf("Path to goal location written to output file.");
+		printf("Path to goal location written to output file.\n");
 	}
 	else {
 		printf("No paths exist to get to the goal location.\n");
@@ -129,4 +129,23 @@ void test_DStar(const char* out_file_name, bool input_file_exists, const char* i
 	// Cleaning up resources
 	fclose(out_file);
 	out_file = NULL;
+}
+
+
+int main(int argc, char* argv[]) {
+	bool input_file_exists = false;
+	bool create_input_file = false;
+	const char* astar_out_file_name = "astar_output.pbm";
+	const char* dstar_out_file_name = "dstar_output.pbm";
+	const char* input_file_name = NULL;
+	const char* new_input_file_name = NULL;
+
+	if(strcmp(argv[1], "-a*") == 0){
+		test_AStar(astar_out_file_name, input_file_exists, input_file_name, create_input_file, new_input_file_name, 20, 20, 100000);
+	}
+	else if(strcmp(argv[1], "-d*") == 0) {
+		test_DStar(dstar_out_file_name, input_file_exists, input_file_name, create_input_file, new_input_file_name, 20, 20, 100000);
+	}
+
+	return EXIT_SUCCESS;
 }

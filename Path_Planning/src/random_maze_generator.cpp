@@ -1,5 +1,5 @@
 // Includes
-#include "header.hh";
+#include "../header.hh"
 
 // Private Define
 #define MAX_MAP_BIT_VAL (2)
@@ -7,7 +7,7 @@
 
 // Initializes random seed
 void init_random_bit() {
-  srand((unsigned int) time);
+  srand(time(0)); //Changed from (unsigned int) time to time(0)
 }
 
 // Gets a random bit
