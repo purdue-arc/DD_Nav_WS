@@ -90,6 +90,9 @@ bool **create_maze(int nrows, int ncols, double density) {
     return maze;
 }
 
+/*
+TODO: FIX CLUSTERED MAZE(Not Generating Adequate amounts of clusters)
+*/
 bool** create_clustered_maze(int nrows, int ncols, double density) {
 	init_random_bit();
 
