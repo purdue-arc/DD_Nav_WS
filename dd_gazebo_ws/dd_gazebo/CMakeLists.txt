@@ -25,5 +25,5 @@ endif()
 
 ament_package()
 
-install(DIRECTORY src launch rviz config
+install(DIRECTORY src launch rviz config worlds
   DESTINATION share/${PROJECT_NAME})

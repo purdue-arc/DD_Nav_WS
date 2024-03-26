@@ -107,6 +107,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/launch"
     "/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/rviz"
     "/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/config"
+    "/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/worlds"
     )
 endif()
 

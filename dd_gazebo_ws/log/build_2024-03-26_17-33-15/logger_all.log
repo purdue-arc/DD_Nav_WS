@@ -1,0 +1,125 @@
+[3.177s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.177s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f30ae1b58d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f30ae68f280>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f30ae68f280>>)
+[3.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.311s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws'
+[3.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.336s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.336s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.336s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'ignore'
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'ignore_ament_install'
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['colcon_pkg']
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'colcon_pkg'
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['colcon_meta']
+[3.337s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'colcon_meta'
+[3.338s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['ros']
+[3.338s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'ros'
+[3.342s] DEBUG:colcon.colcon_core.package_identification:Package 'dd_gazebo' with type 'ros.ament_cmake' and name 'dd_gazebo'
+[3.343s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.343s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.343s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.344s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.602s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[3.602s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.698s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install
+[3.745s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 327 installed packages in /opt/ros/humble
+[3.761s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_args' from command line to 'None'
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_target' from command line to 'None'
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[4.003s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[4.004s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[4.004s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[4.004s] DEBUG:colcon.colcon_core.verb:Building package 'dd_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo', 'merge_install': False, 'path': '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo', 'symlink_install': False, 'test_result_base': None}
+[4.048s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[4.095s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[4.096s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo' with build type 'ament_cmake'
+[4.096s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo'
+[4.143s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[4.143s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.144s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j16 -l16
+[4.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j16 -l16
+[4.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[4.454s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dd_gazebo)
+[4.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[4.524s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake module files
+[4.525s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake config files
+[4.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('dd_gazebo', 'cmake_prefix_path')
+[4.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.ps1'
+[4.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.dsv'
+[4.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.sh'
+[4.574s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[4.574s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/pkgconfig/dd_gazebo.pc'
+[4.574s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/python3.10/site-packages'
+[4.575s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[4.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.ps1'
+[4.620s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.dsv'
+[4.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.sh'
+[4.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.bash'
+[4.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.zsh'
+[4.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/colcon-core/packages/dd_gazebo)
+[4.707s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dd_gazebo)
+[4.755s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake module files
+[4.756s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake config files
+[4.757s] Level 1:colcon.colcon_core.shell:create_environment_hook('dd_gazebo', 'cmake_prefix_path')
+[4.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.ps1'
+[4.801s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.dsv'
+[4.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.sh'
+[4.803s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[4.803s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/pkgconfig/dd_gazebo.pc'
+[4.803s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/python3.10/site-packages'
+[4.804s] Level 1:colcon.colcon_core.environment:checking '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[4.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.ps1'
+[4.848s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.dsv'
+[4.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.sh'
+[4.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.bash'
+[4.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.zsh'
+[4.851s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/colcon-core/packages/dd_gazebo)
+[4.852s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.853s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.853s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.853s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.905s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.905s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.905s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.950s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.991s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/local_setup.ps1'
+[4.993s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/_local_setup_util_ps1.py'
+[4.995s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/setup.ps1'
+[5.039s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/local_setup.sh'
+[5.041s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/_local_setup_util_sh.py'
+[5.042s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/setup.sh'
+[5.085s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/local_setup.bash'
+[5.086s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/setup.bash'
+[5.129s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/local_setup.zsh'
+[5.130s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/setup.zsh'
