@@ -1,0 +1,51 @@
+[0.018s] Invoking command in '/home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo
+[0.661s] -- The C compiler identification is GNU 11.4.0
+[1.067s] -- The CXX compiler identification is GNU 11.4.0
+[1.093s] -- Detecting C compiler ABI info
+[1.257s] -- Detecting C compiler ABI info - done
+[1.267s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.267s] -- Detecting C compile features
+[1.268s] -- Detecting C compile features - done
+[1.272s] -- Detecting CXX compiler ABI info
+[1.422s] -- Detecting CXX compiler ABI info - done
+[1.429s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.430s] -- Detecting CXX compile features
+[1.430s] -- Detecting CXX compile features - done
+[1.460s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.606s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.759s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.837s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.837s] -- Configured cppcheck include dirs: 
+[1.837s] -- Configured cppcheck exclude dirs and/or files: 
+[1.839s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.839s] -- Added test 'lint_cmake' to check CMake code style
+[1.840s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.841s] -- Added test 'uncrustify' to check C / C++ code style
+[1.841s] -- Configured uncrustify additional arguments: 
+[1.842s] -- Added test 'xmllint' to check XML markup files
+[1.845s] -- Configuring done
+[1.851s] -- Generating done
+[1.852s] -- Build files have been written to: /home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo
+[1.861s] Invoked command in '/home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo
+[1.862s] Invoking command in '/home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo -- -j8 -l8
+[1.903s] Invoked command in '/home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo -- -j8 -l8
+[1.936s] Invoking command in '/home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo
+[1.944s] -- Install configuration: ""
+[1.944s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/ament_index/resource_index/package_run_dependencies/dd_gazebo
+[1.944s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/ament_index/resource_index/parent_prefix_path/dd_gazebo
+[1.945s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/environment/ament_prefix_path.sh
+[1.945s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/environment/ament_prefix_path.dsv
+[1.946s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/environment/path.sh
+[1.946s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/environment/path.dsv
+[1.946s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/local_setup.bash
+[1.946s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/local_setup.sh
+[1.947s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/local_setup.zsh
+[1.947s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/local_setup.dsv
+[1.947s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/package.dsv
+[1.947s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/ament_index/resource_index/packages/dd_gazebo
+[1.947s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/cmake/dd_gazeboConfig.cmake
+[1.947s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/cmake/dd_gazeboConfig-version.cmake
+[1.948s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/package.xml
+[1.948s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/launch
+[1.948s] -- Installing: /home/ubuntu/Desktop/DD_Nav_WS/install/dd_gazebo/share/dd_gazebo/launch/simulation.launch.py
+[1.951s] Invoked command in '/home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/DD_Nav_WS/build/dd_gazebo

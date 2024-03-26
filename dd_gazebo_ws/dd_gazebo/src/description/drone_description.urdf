@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="drone">
+ 
+  <!-- properties -->
+  <xacro:property name="base_link_radius" value="0.2"/>
+  <xacro:property name="base_link_height" value="0.07"/>
+  <xacro:property name="base_link_mass" value="0.88"/>
+  <xacro:property name="arm_radius" value="0.01"/>
+  <xacro:property name="arm_length" value="0.3"/>
+  <xacro:property name="arm_mass" value="0.01"/>
+  <xacro:property name="propeller_radius" value="0.15"/>
+  <xacro:property name="propeller_height" value="0.01"/>
+  <xacro:property name="propeller_height_offset" value="0.025"/>
+  <xacro:property name="propeller_mass" value="0.01"/>
+
+   <xacro:macro name="cylinder_inertial" params="radius height mass *origin">
+    <inertial>
+      <mass value="${mass}"/>
+      <xacro:insert_block name="origin"/>
+      <inertia
+        ixx="${0.0833333 * mass * (3 * radius * radius + height * height)}"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="${0.0833333 * mass * (3 * radius * radius + height * height)}"
+        iyz="0.0"
+        izz="${0.5 * mass * radius * radius}"
+      />
+    </inertial>
+  </xacro:macro>
+
+
+    <link name="imu_link">
+    <visual>
+        <geometry>
+        <box size="0.1 0.1 0.1"/>
+        </geometry>
+    </visual>
+
+    <collision>
+        <geometry>
+        <box size="0.1 0.1 0.1"/>
+        </geometry>
+    </collision>
+
+    <xacro:box_inertia m="0.1" w="0.1" d="0.1" h="0.1"/>
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.01"/>
+    </joint>
+
+    <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+    <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <ros>
+            <namespace>/demo</namespace>
+            <remapping>~/out:=imu</remapping>
+        </ros>
+        <initial_orientation_as_reference>false</initial_orientation_as_reference>
+        </plugin>
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <visualize>true</visualize>
+        <imu>
+        <angular_velocity>
+            <x>
+            <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+                <bias_mean>0.0000075</bias_mean>
+                <bias_stddev>0.0000008</bias_stddev>
+            </noise>
+            </x>
+            <y>
+            <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+                <bias_mean>0.0000075</bias_mean>
+                <bias_stddev>0.0000008</bias_stddev>
+            </noise>
+            </y>
+            <z>
+            <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+                <bias_mean>0.0000075</bias_mean>
+                <bias_stddev>0.0000008</bias_stddev>
+            </noise>
+            </z>
+        </angular_velocity>
+        <linear_acceleration>
+            <x>
+            <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+            </noise>
+            </x>
+            <y>
+            <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+            </noise>
+            </y>
+            <z>
+            <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+            </noise>
+            </z>
+        </linear_acceleration>
+        </imu>
+    </sensor>
+    </gazebo>
+
+    <xacro:macro name="arm" params="i">
+        <link name="arm${i}">
+            <visual>
+                <origin xyz="${cos((i-1)*pi/3+pi/6)*(base_link_radius+arm_length/2)} ${sin((i-1)*pi/3+pi/6)*(base_link_radius+arm_length/2)} ${base_link_height/2-arm_radius}" rpy="0 ${pi/2} ${(i-1)*pi/3+pi/6}"/>
+                <geometry>
+                <cylinder radius="${arm_radius}" length="${arm_length}"/>
+                </geometry>
+                <material name="arm_material"/>
+            </visual>
+            <collision>
+                <origin xyz="${cos((i-1)*pi/3+pi/6)*(base_link_radius+arm_length/2)} ${sin((i-1)*pi/3+pi/6)*(base_link_radius+arm_length/2)} ${base_link_height/2-arm_radius}" rpy="0 ${pi/2} ${(i-1)*pi/3+pi/6}"/>
+                <geometry>
+                <cylinder radius="${arm_radius}" length="${arm_length}"/>
+                </geometry>
+            </collision>
+            <xacro:cylinder_inertial radius="${arm_radius}" height="${arm_length}" mass="${arm_mass}">
+                <origin xyz="${cos((i-1)*pi/3+pi/6)*(base_link_radius+arm_length/2)} ${sin((i-1)*pi/3+pi/6)*(base_link_radius+arm_length/2)} ${base_link_height/2-arm_radius}" rpy="0 ${pi/2} ${(i-1)*pi/3+pi/6}"/>
+            </xacro:cylinder_inertial>
+        </link>
+   
+    <joint name="base_link_arm${i}" type="fixed">
+      <parent link="base_link"/>
+      <child link="arm${i}"/>
+    </joint>
+   
+    <gazebo reference="arm${i}">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  </xacro:macro>
+
+    <xacro:macro name="propeller" params="i mat">
+    <link name="propeller${i}">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="${propeller_radius}" length="${propeller_height}"/>
+        </geometry>
+        <material name="propeller_material"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="${propeller_radius}" length="${propeller_height}"/>
+        </geometry>
+      </collision>
+      <xacro:cylinder_inertial radius="${propeller_radius}" height="${propeller_height}" mass="${propeller_mass}">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </xacro:cylinder_inertial>
+    </link>
+   
+    <joint name="arm${i}_propeller${i}" type="revolute">
+      <parent link="arm${i}"/>
+      <child link="propeller${i}"/>
+      <origin xyz="${cos((i-1)*pi/3+pi/6)*(base_link_radius+arm_length)} ${sin((i-1)*pi/3+pi/6)*(base_link_radius+arm_length)} ${base_link_height/2-arm_radius+propeller_height_offset}" rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="0" upper="0" effort="0" velocity="0"/>
+    </joint>
+   
+    <gazebo reference="propeller${i}">
+      <material>${mat}</material>
+    </gazebo>
+  </xacro:macro>
+
+  <material name="base_link_material">
+    <color rgba="1 0.2 0.2 1"/>
+  </material>
+ 
+  <material name="arm_material">
+    <color rgba="0.8 0.8 0.8 1"/>
+  </material>
+ 
+  <material name="propeller_material">
+    <color rgba="0 0 0 0.6"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${base_link_radius}" length="${base_link_height}"/>
+      </geometry>
+      <material name="base_link_material">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="${base_link_radius}" length="${base_link_height}"/>
+      </geometry>
+    </collision>
+    <xacro:cylinder_inertial radius="${base_link_radius}" height="${base_link_height}" mass="${base_link_mass}">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:cylinder_inertial>
+  </link>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <xacro:arm i="1"/>
+  <xacro:arm i="2"/>
+  <xacro:arm i="3"/>
+  <xacro:arm i="4"/>
+  <xacro:arm i="5"/>
+  <xacro:arm i="6"/>
+ 
+  <xacro:propeller i="1" mat="Gazebo/RedTransparent"/>
+  <xacro:propeller i="2" mat="Gazebo/BlackTransparent"/>
+  <xacro:propeller i="3" mat="Gazebo/BlueTransparent"/>
+  <xacro:propeller i="4" mat="Gazebo/BlueTransparent"/>
+  <xacro:propeller i="5" mat="Gazebo/BlackTransparent"/>
+  <xacro:propeller i="6" mat="Gazebo/RedTransparent"/>
+
+</robot>

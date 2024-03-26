@@ -1,0 +1,6 @@
+[0.033s] Invoking command in '/home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
+[0.178s] [0mCMake Error: The current CMakeCache.txt directory /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeCache.txt is different than the directory /home/dronedelivery/ARC/build/dd_gazebo where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.208s] [0mCMake Error: The source directory "/home/dronedelivery/ARC/dd_gazebo" does not exist.
+[0.208s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.229s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.235s] Invoked command in '/home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
