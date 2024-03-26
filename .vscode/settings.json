@@ -2,5 +2,6 @@
     "files.associations": {
         "queue": "cpp",
         "chrono": "cpp"
-    }
+    },
+    "ros.distro": "humble"
 }

@@ -1,0 +1,30 @@
+[0.186s] Invoking command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j16 -l16
+[0.252s] Invoked command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j16 -l16
+[0.302s] Invoking command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[0.312s] -- Install configuration: ""
+[0.312s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/ament_index/resource_index/package_run_dependencies/dd_gazebo
+[0.313s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/ament_index/resource_index/parent_prefix_path/dd_gazebo
+[0.313s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/ament_prefix_path.sh
+[0.313s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/ament_prefix_path.dsv
+[0.314s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/path.sh
+[0.314s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/path.dsv
+[0.314s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.bash
+[0.315s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.sh
+[0.315s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.zsh
+[0.315s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.dsv
+[0.315s] -- Installing: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.dsv
+[0.316s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/ament_index/resource_index/packages/dd_gazebo
+[0.316s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/cmake/dd_gazeboConfig.cmake
+[0.316s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/cmake/dd_gazeboConfig-version.cmake
+[0.317s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.xml
+[0.318s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/src
+[0.319s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/src/description
+[0.319s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/src/description/drone_description.urdf
+[0.320s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/src/main.cpp
+[0.320s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/launch
+[0.321s] -- Installing: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/launch/simulation.launch.py
+[0.321s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/rviz
+[0.322s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/rviz/drone_sim_config.rviz
+[0.322s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/config
+[0.323s] -- Up-to-date: /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/config/ekf.yaml
+[0.323s] Invoked command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo
+CMAKE_SOURCE_DIR = /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+CMAKE_BINARY_DIR = /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
 
 # Utility rule file for dd_gazebo_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/dd_gazebo_uninstall.dir/compiler_depend.make
 include CMakeFiles/dd_gazebo_uninstall.dir/progress.make
 
 CMakeFiles/dd_gazebo_uninstall:
-	/usr/bin/cmake -P /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 dd_gazebo_uninstall: CMakeFiles/dd_gazebo_uninstall
 dd_gazebo_uninstall: CMakeFiles/dd_gazebo_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/dd_gazebo_uninstall.dir/clean:
 .PHONY : CMakeFiles/dd_gazebo_uninstall.dir/clean
 
 CMakeFiles/dd_gazebo_uninstall.dir/depend:
-	cd /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/dd_gazebo_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/dd_gazebo_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dd_gazebo_uninstall.dir/depend
 
