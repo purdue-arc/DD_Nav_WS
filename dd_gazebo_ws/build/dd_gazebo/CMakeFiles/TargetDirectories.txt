@@ -1,9 +1,0 @@
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/uninstall.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/dd_gazebo_uninstall.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/test.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/edit_cache.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/rebuild_cache.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/list_install_components.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/install.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/install/local.dir
-/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo/CMakeFiles/install/strip.dir
