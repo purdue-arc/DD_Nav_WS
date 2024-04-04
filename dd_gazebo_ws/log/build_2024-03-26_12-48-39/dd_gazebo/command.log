@@ -1,2 +1,0 @@
-Invoking command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': /usr/bin/cmake /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo -DCMAKE_INSTALL_PREFIX=/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo
-Invoked command in '/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '1': /usr/bin/cmake /home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/dd_gazebo -DCMAKE_INSTALL_PREFIX=/home/dronedelivery/Desktop/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo

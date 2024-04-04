@@ -4,3 +4,4 @@ dd_gazebo_ws/build
 dd_gazebo_ws/install
 build
 install
+log

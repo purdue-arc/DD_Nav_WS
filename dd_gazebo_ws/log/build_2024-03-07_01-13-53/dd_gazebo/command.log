@@ -1,4 +1,0 @@
-Invoking command in '/home/dronedelivery/ARC/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dronedelivery/ARC/build/dd_gazebo -- -j16 -l16
-Invoked command in '/home/dronedelivery/ARC/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dronedelivery/ARC/build/dd_gazebo -- -j16 -l16
-Invoking command in '/home/dronedelivery/ARC/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dronedelivery/ARC/build/dd_gazebo
-Invoked command in '/home/dronedelivery/ARC/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dronedelivery/ARC/build/dd_gazebo

@@ -1,4 +1,0 @@
-Invoking command in '/home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
-Invoked command in '/home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
-Invoking command in '/home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
-Invoked command in '/home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
