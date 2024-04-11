@@ -1,0 +1,147 @@
+[0.038s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com
+[0.074s] -- The C compiler identification is GNU 11.4.0
+[0.109s] -- The CXX compiler identification is GNU 11.4.0
+[0.114s] -- Detecting C compiler ABI info
+[0.157s] -- Detecting C compiler ABI info - done
+[0.162s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.162s] -- Detecting C compile features
+[0.162s] -- Detecting C compile features - done
+[0.165s] -- Detecting CXX compiler ABI info
+[0.216s] -- Detecting CXX compiler ABI info - done
+[0.221s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.222s] -- Detecting CXX compile features
+[0.222s] -- Detecting CXX compile features - done
+[0.223s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.462s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.519s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.540s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.543s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.548s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.557s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.569s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.581s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.586s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.588s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.651s] -- Found px4_msgs: 2.0.1 (/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.674s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.718s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.720s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.790s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.809s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.840s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.847s] -- Looking for pthread.h
+[0.898s] -- Looking for pthread.h - found
+[0.898s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.950s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.951s] -- Found Threads: TRUE  
+[1.038s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.095s] -- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)
+[1.100s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.169s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.172s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.173s] -- Configured cppcheck include dirs: /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com/include/px4_ros_com>
+[1.173s] -- Configured cppcheck exclude dirs and/or files: 
+[1.175s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.175s] -- Configured cpplint exclude dirs and/or files: 
+[1.176s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.176s] -- Added test 'lint_cmake' to check CMake code style
+[1.177s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.179s] -- Added test 'uncrustify' to check C / C++ code style
+[1.179s] -- Configured uncrustify additional arguments: 
+[1.180s] -- Added test 'xmllint' to check XML markup files
+[1.181s] -- Configuring done
+[1.195s] -- Generating done
+[1.196s] -- Build files have been written to: /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com
+[1.204s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com
+[1.206s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com -- -j8 -l8
+[1.245s] [ 33%] [32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o[0m
+[1.246s] [ 33%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[1.246s] [ 33%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[1.246s] [ 33%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[1.246s] [ 41%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[1.247s] [ 50%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[1.256s] [ 50%] Built target ament_cmake_python_copy_px4_ros_com
+[1.555s] running egg_info
+[1.557s] creating px4_ros_com.egg-info
+[1.589s] writing px4_ros_com.egg-info/PKG-INFO
+[1.590s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[1.591s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[1.591s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.687s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.689s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.747s] [ 50%] Built target ament_cmake_python_build_px4_ros_com_egg
+[8.320s] [ 58%] [32m[1mLinking CXX executable offboard_control_srv[0m
+[8.854s] [ 58%] Built target offboard_control_srv
+[8.919s] [ 66%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[9.229s] [ 66%] Built target debug_vect_advertiser
+[10.062s] [ 75%] [32m[1mLinking CXX executable offboard_control[0m
+[10.381s] [ 75%] Built target offboard_control
+[11.462s] [ 83%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[11.658s] [ 91%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[11.754s] [ 91%] Built target frame_transforms
+[12.021s] [ 91%] Built target sensor_combined_listener
+[12.364s] [100%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[12.605s] [100%] Built target vehicle_gps_position_listener
+[12.616s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com -- -j8 -l8
+[12.642s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com
+[12.651s] -- Install configuration: ""
+[12.653s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[12.655s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener" to ""
+[12.655s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[12.657s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener" to ""
+[12.658s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[12.658s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser" to ""
+[12.658s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[12.659s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control" to ""
+[12.659s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[12.660s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv" to ""
+[12.660s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[12.660s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[12.660s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/include/px4_ros_com
+[12.660s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[12.661s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/libframe_transforms.so
+[12.663s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[12.663s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//launch
+[12.663s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//test
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[12.664s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[12.665s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[12.665s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com
+[12.666s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[12.666s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[12.687s] Listing '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[12.687s] Compiling '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py'...
+[12.687s] Compiling '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py'...
+[12.690s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[12.690s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[12.690s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.dsv
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.691s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[12.692s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.692s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[12.692s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[12.692s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[12.692s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.xml
+[12.694s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com

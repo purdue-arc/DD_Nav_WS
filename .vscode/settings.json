@@ -3,5 +3,6 @@
         "queue": "cpp",
         "chrono": "cpp"
     },
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "cmake.sourceDirectory": "/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo"
 }

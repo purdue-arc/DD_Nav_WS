@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:105 (file):
+  file INSTALL cannot find
+  "/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/description": No such file or
+  directory.
+
+[0m
