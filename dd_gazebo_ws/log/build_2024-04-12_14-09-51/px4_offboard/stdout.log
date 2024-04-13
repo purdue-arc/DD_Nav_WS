@@ -1,0 +1,39 @@
+running egg_info
+writing ../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO
+writing dependency_links to ../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt
+writing entry points to ../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt
+writing requirements to ../../build/px4_offboard/px4_offboard.egg-info/requires.txt
+writing top-level names to ../../build/px4_offboard/px4_offboard.egg-info/top_level.txt
+reading manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+running build
+running build_py
+copying px4_offboard/control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/velocity_control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/processes.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/__init__.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/visualizer.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+running install
+running install_lib
+copying /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard/control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard
+copying /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard/velocity_control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard
+byte-compiling /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/control.py to control.cpython-310.pyc
+byte-compiling /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/velocity_control.py to velocity_control.cpython-310.pyc
+running install_data
+copying resource/px4_offboard -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/ament_index/resource_index/packages
+copying resource/visualize.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/ament_index/resource_index/packages
+copying package.xml -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+copying launch/offboard_velocity_control.launch.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+copying resource/visualize.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+copying resource/drone_sim_config.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+running install_egg_info
+removing '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/px4_offboard/px4_offboard.egg-info to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info
+running install_scripts
+Installing control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+Installing offboard_control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+Installing processes script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+Installing velocity_control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+Installing visualizer script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+writing list of installed files to '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/install.log'

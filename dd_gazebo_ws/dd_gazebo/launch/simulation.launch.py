@@ -6,7 +6,7 @@ import os
 
 def generate_launch_description():
     pkg_share = launch_ros.substitutions.FindPackageShare(package='dd_gazebo').find('dd_gazebo')
-    default_model_path = os.path.join(pkg_share, 'src/description/urdf/Kwad.xacro')
+    default_model_path = os.path.join(pkg_share, 'src/description/drone_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/drone_sim_config.rviz')
     world_path=os.path.join(pkg_share, 'worlds/ksql_airport.world')
 
