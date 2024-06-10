@@ -1,0 +1,69 @@
+[0.000000] (-) TimerEvent: {}
+[0.000181] (-) JobUnselected: {'identifier': 'dd_gazebo'}
+[0.000208] (-) JobUnselected: {'identifier': 'drone_nav'}
+[0.000220] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000267] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000278] (px4_offboard) JobQueued: {'identifier': 'px4_offboard', 'dependencies': OrderedDict([('px4_msgs', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs')])}
+[0.000292] (px4_offboard) JobStarted: {'identifier': 'px4_offboard'}
+[0.099666] (-) TimerEvent: {}
+[0.200195] (-) TimerEvent: {}
+[0.300665] (-) TimerEvent: {}
+[0.401024] (-) TimerEvent: {}
+[0.501407] (-) TimerEvent: {}
+[0.601843] (-) TimerEvent: {}
+[0.624063] (px4_offboard) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/px4_offboard', 'build', '--build-base', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build', 'install', '--record', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/install.log', '--single-version-externally-managed'], 'cwd': '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_offboard', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'brc', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/brc', 'OLDPWD': '/home/brc/DD_Nav_WS', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1028', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'brc', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'brc', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/brc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/brc/.local/bin', 'SESSION_MANAGER': 'local/BRC-Laptop:@/tmp/.ICE-unix/1004,unix/BRC-Laptop:/tmp/.ICE-unix/1004', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9aa413c1_50b3_4d18_b267_1b977f5bad99', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.EJD4O2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.428', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/prefix_override:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo'}, 'shell': False}
+[0.702030] (-) TimerEvent: {}
+[0.757396] (px4_offboard) StdoutLine: {'line': b'running egg_info\n'}
+[0.766138] (px4_offboard) StdoutLine: {'line': b'writing ../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO\n'}
+[0.766788] (px4_offboard) StdoutLine: {'line': b'writing dependency_links to ../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt\n'}
+[0.766963] (px4_offboard) StdoutLine: {'line': b'writing entry points to ../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt\n'}
+[0.767051] (px4_offboard) StdoutLine: {'line': b'writing requirements to ../../build/px4_offboard/px4_offboard.egg-info/requires.txt\n'}
+[0.767193] (px4_offboard) StdoutLine: {'line': b'writing top-level names to ../../build/px4_offboard/px4_offboard.egg-info/top_level.txt\n'}
+[0.785065] (px4_offboard) StdoutLine: {'line': b"reading manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'\n"}
+[0.785298] (px4_offboard) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[0.785717] (px4_offboard) StdoutLine: {'line': b"writing manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'\n"}
+[0.785859] (px4_offboard) StdoutLine: {'line': b'running build\n'}
+[0.785939] (px4_offboard) StdoutLine: {'line': b'running build_py\n'}
+[0.786243] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard\n'}
+[0.786644] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/velocity_control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard\n'}
+[0.786892] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/processes.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard\n'}
+[0.787001] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/__init__.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard\n'}
+[0.787076] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/visualizer.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard\n'}
+[0.787359] (px4_offboard) StdoutLine: {'line': b'running install\n'}
+[0.787767] (px4_offboard) StderrLine: {'line': b'/home/brc/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[0.787870] (px4_offboard) StderrLine: {'line': b'!!\n'}
+[0.787935] (px4_offboard) StderrLine: {'line': b'\n'}
+[0.787998] (px4_offboard) StderrLine: {'line': b'        ********************************************************************************\n'}
+[0.788061] (px4_offboard) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[0.788123] (px4_offboard) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[0.788185] (px4_offboard) StderrLine: {'line': b'        standards-based tools.\n'}
+[0.788247] (px4_offboard) StderrLine: {'line': b'\n'}
+[0.788308] (px4_offboard) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[0.788370] (px4_offboard) StderrLine: {'line': b'        ********************************************************************************\n'}
+[0.788436] (px4_offboard) StderrLine: {'line': b'\n'}
+[0.788519] (px4_offboard) StderrLine: {'line': b'!!\n'}
+[0.788594] (px4_offboard) StderrLine: {'line': b'  self.initialize_options()\n'}
+[0.791214] (px4_offboard) StdoutLine: {'line': b'running install_lib\n'}
+[0.800598] (px4_offboard) StdoutLine: {'line': b'running install_data\n'}
+[0.802097] (-) TimerEvent: {}
+[0.808929] (px4_offboard) StdoutLine: {'line': b'copying resource/px4_offboard -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/ament_index/resource_index/packages\n'}
+[0.809160] (px4_offboard) StdoutLine: {'line': b'copying resource/visualize.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/ament_index/resource_index/packages\n'}
+[0.809266] (px4_offboard) StdoutLine: {'line': b'copying package.xml -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard\n'}
+[0.809381] (px4_offboard) StdoutLine: {'line': b'copying launch/offboard_velocity_control.launch.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard\n'}
+[0.809605] (px4_offboard) StdoutLine: {'line': b'copying resource/visualize.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard\n'}
+[0.809705] (px4_offboard) StdoutLine: {'line': b'copying resource/drone_sim_config.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard\n'}
+[0.809786] (px4_offboard) StdoutLine: {'line': b'copying resource/full_drone_config.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard\n'}
+[0.809854] (px4_offboard) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.818855] (px4_offboard) StdoutLine: {'line': b"removing '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.819086] (px4_offboard) StdoutLine: {'line': b'Copying ../../build/px4_offboard/px4_offboard.egg-info to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info\n'}
+[0.819852] (px4_offboard) StdoutLine: {'line': b'running install_scripts\n'}
+[0.902230] (-) TimerEvent: {}
+[0.906181] (px4_offboard) StdoutLine: {'line': b'Installing control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard\n'}
+[0.906488] (px4_offboard) StdoutLine: {'line': b'Installing offboard_control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard\n'}
+[0.906609] (px4_offboard) StdoutLine: {'line': b'Installing processes script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard\n'}
+[0.906814] (px4_offboard) StdoutLine: {'line': b'Installing velocity_control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard\n'}
+[0.906925] (px4_offboard) StdoutLine: {'line': b'Installing visualizer script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard\n'}
+[0.907176] (px4_offboard) StdoutLine: {'line': b"writing list of installed files to '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/install.log'\n"}
+[0.928133] (px4_offboard) CommandEnded: {'returncode': 0}
+[0.962037] (px4_offboard) JobEnded: {'identifier': 'px4_offboard', 'rc': 0}
+[0.962948] (-) EventReactorShutdown: {}

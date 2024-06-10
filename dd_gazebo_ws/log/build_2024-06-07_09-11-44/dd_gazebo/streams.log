@@ -1,0 +1,5 @@
+[0.038s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
+[0.049s] [0mCMake Error: The source directory "/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo" does not exist.
+[0.050s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.050s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.051s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8

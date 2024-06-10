@@ -1,0 +1,10 @@
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:[m[K In member function ‘[01m[Kvoid StabilizedBroadcaster::tf_sub_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:32:21:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Ktf2::Quaternion q[m[K’
+   32 |     tf2::Quaternion [01;31m[Kq[m[K;
+      |                     [01;31m[K^[m[K
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:26:21:[m[K [01;36m[Knote: [m[K‘[01m[Ktf2::Quaternion q[m[K’ previously declared here
+   26 |     tf2::Quaternion [01;36m[Kq[m[K(msg->orientation.x, msg->orientation.y, msg->orientation.z, msg->orientation.w);
+      |                     [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/stabilized_tf_broadcaster.dir/build.make:76: CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/stabilized_tf_broadcaster.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

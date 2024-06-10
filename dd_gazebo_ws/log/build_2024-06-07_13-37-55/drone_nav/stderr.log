@@ -1,0 +1,5 @@
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:[m[K In member function ‘[01m[Kvoid StabilizedBroadcaster::tf_sub_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:13:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   13 | ilizedBroadcaster::tf_sub_callback([01;35m[Kconst std::shared_ptr<sensor_msgs::msg::Imu> msg[m[K)
+      |                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+

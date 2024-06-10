@@ -1,0 +1,78 @@
+[0.040s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
+[0.059s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.163s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.198s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.202s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.208s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.219s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.235s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.285s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.287s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.356s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.374s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.404s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.412s] -- Looking for pthread.h
+[0.532s] -- Looking for pthread.h - found
+[0.533s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.604s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.605s] -- Found Threads: TRUE  
+[0.711s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.761s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.761s] -- Configured cppcheck include dirs: 
+[0.761s] -- Configured cppcheck exclude dirs and/or files: 
+[0.761s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.762s] -- Added test 'lint_cmake' to check CMake code style
+[0.762s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.764s] -- Added test 'uncrustify' to check C / C++ code style
+[0.764s] -- Configured uncrustify additional arguments: 
+[0.764s] -- Added test 'xmllint' to check XML markup files
+[0.765s] -- Configuring done
+[0.767s] -- Generating done
+[0.768s] -- Build files have been written to: /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[0.785s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
+[0.804s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[0.809s] -- Install configuration: ""
+[0.809s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/ament_index/resource_index/package_run_dependencies/dd_gazebo
+[0.809s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/ament_index/resource_index/parent_prefix_path/dd_gazebo
+[0.809s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/ament_prefix_path.sh
+[0.809s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/ament_prefix_path.dsv
+[0.809s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/path.sh
+[0.810s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/environment/path.dsv
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.bash
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.sh
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.zsh
+[0.810s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/local_setup.dsv
+[0.810s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.dsv
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/ament_index/resource_index/packages/dd_gazebo
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/cmake/dd_gazeboConfig.cmake
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/cmake/dd_gazeboConfig-version.cmake
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.xml
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/src
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/src/main.cpp
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/launch
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/launch/navigation.launch.py
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/launch/simulation.launch.py
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/rviz
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/rviz/drone_sim_config.rviz
+[0.810s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/config
+[0.810s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/config/nav2_params.yaml
+[0.811s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/config/ekf.yaml
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/worlds
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/worlds/test_world.dae
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/worlds/my_world.world
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/worlds/simple_world.sdf
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/worlds/ksql_airport.world
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/cgo3_vertical_arm_remeshed_v1.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/leg1_remeshed_v3.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/cgo3_horizontal_arm_remeshed_v1.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/cgo3_mount_remeshed_v1.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/prop_cw_assembly_remeshed_v3.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/prop_ccw_assembly_remeshed_v3.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/main_body_remeshed_v3.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/leg2_remeshed_v3.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/prop_guard_jybhz.stl
+[0.811s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/meshes/cgo3_camera_remeshed_v1.stl
+[0.811s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/description/drone_model.urdf
+[0.812s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo

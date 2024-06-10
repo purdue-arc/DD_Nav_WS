@@ -1,0 +1,8 @@
+In file included from [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:1[m[K:
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/include/drone_nav/stabilized_tf_broadcaster.hpp:10:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/imu.hpp: No such file or directory
+   10 | #include [01;31m[K"sensor_msgs/msg/imu.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/stabilized_tf_broadcaster.dir/build.make:76: CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/stabilized_tf_broadcaster.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

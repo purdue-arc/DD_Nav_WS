@@ -1,0 +1,57 @@
+[0.030s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav
+[0.098s] -- The C compiler identification is GNU 11.4.0
+[0.156s] -- The CXX compiler identification is GNU 11.4.0
+[0.163s] -- Detecting C compiler ABI info
+[0.212s] -- Detecting C compiler ABI info - done
+[0.216s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.217s] -- Detecting C compile features
+[0.217s] -- Detecting C compile features - done
+[0.220s] -- Detecting CXX compiler ABI info
+[0.271s] -- Detecting CXX compiler ABI info - done
+[0.276s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.276s] -- Detecting CXX compile features
+[0.276s] -- Detecting CXX compile features - done
+[0.280s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.586s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.652s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.683s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.686s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.692s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.702s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.715s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.761s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.763s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.827s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.845s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.874s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.881s] -- Looking for pthread.h
+[0.932s] -- Looking for pthread.h - found
+[0.932s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.982s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.984s] -- Found Threads: TRUE  
+[1.090s] -- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)
+[1.091s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.120s] -- Found tf2: 0.25.4 (/opt/ros/humble/share/tf2/cmake)
+[1.132s] -- Found tf2_ros: 0.25.4 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.344s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.394s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.394s] -- Configured cppcheck include dirs: 
+[1.394s] -- Configured cppcheck exclude dirs and/or files: 
+[1.394s] -- Added test 'lint_cmake' to check CMake code style
+[1.395s] -- Added test 'uncrustify' to check C / C++ code style
+[1.395s] -- Configured uncrustify additional arguments: 
+[1.395s] -- Added test 'xmllint' to check XML markup files
+[1.397s] -- Configuring done
+[1.403s] -- Generating done
+[1.405s] -- Build files have been written to: /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav
+[1.413s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav
+[1.413s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[1.444s] [ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[3.146s] [100%] [32m[1mLinking CXX executable stabilized_tf_broadcaster[0m
+[3.262s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[3.262s] (.text+0x1b): undefined reference to `main'
+[3.265s] collect2: error: ld returned 1 exit status
+[3.267s] gmake[2]: *** [CMakeFiles/stabilized_tf_broadcaster.dir/build.make:197: stabilized_tf_broadcaster] Error 1
+[3.267s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/stabilized_tf_broadcaster.dir/all] Error 2
+[3.267s] gmake: *** [Makefile:146: all] Error 2
+[3.268s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8

@@ -1,0 +1,50 @@
+[0.659s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_offboard': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/prefix_override:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/px4_offboard build --build-base /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build install --record /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/install.log --single-version-externally-managed
+[0.801s] running egg_info
+[0.810s] writing ../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO
+[0.810s] writing dependency_links to ../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt
+[0.811s] writing entry points to ../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt
+[0.811s] writing requirements to ../../build/px4_offboard/px4_offboard.egg-info/requires.txt
+[0.811s] writing top-level names to ../../build/px4_offboard/px4_offboard.egg-info/top_level.txt
+[0.832s] reading manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+[0.833s] adding license file 'LICENSE'
+[0.834s] writing manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+[0.834s] running build
+[0.834s] running build_py
+[0.834s] copying px4_offboard/control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+[0.835s] copying px4_offboard/velocity_control.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+[0.835s] copying px4_offboard/processes.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+[0.836s] copying px4_offboard/__init__.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+[0.836s] copying px4_offboard/visualizer.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build/lib/px4_offboard
+[0.836s] running install
+[0.837s] /home/brc/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[0.837s] !!
+[0.837s] 
+[0.837s]         ********************************************************************************
+[0.837s]         Please avoid running ``setup.py`` directly.
+[0.837s]         Instead, use pypa/build, pypa/installer or other
+[0.837s]         standards-based tools.
+[0.837s] 
+[0.837s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[0.837s]         ********************************************************************************
+[0.837s] 
+[0.837s] !!
+[0.837s]   self.initialize_options()
+[0.842s] running install_lib
+[0.854s] running install_data
+[0.863s] copying resource/px4_offboard -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/ament_index/resource_index/packages
+[0.863s] copying resource/visualize.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/ament_index/resource_index/packages
+[0.863s] copying package.xml -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+[0.864s] copying launch/offboard_velocity_control.launch.py -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+[0.864s] copying resource/visualize.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+[0.864s] copying resource/drone_sim_config.rviz -> /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/share/px4_offboard
+[0.864s] running install_egg_info
+[0.875s] removing '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info' (and everything under it)
+[0.875s] Copying ../../build/px4_offboard/px4_offboard.egg-info to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info
+[0.876s] running install_scripts
+[0.970s] Installing control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+[0.970s] Installing offboard_control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+[0.970s] Installing processes script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+[0.970s] Installing velocity_control script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+[0.970s] Installing visualizer script to /home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/px4_offboard
+[0.971s] writing list of installed files to '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/install.log'
+[0.992s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_offboard' returned '0': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/prefix_override:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/px4_offboard build --build-base /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/build install --record /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_offboard/install.log --single-version-externally-managed

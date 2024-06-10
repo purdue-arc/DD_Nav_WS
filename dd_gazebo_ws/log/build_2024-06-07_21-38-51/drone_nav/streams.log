@@ -1,0 +1,33 @@
+[0.046s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[0.085s] [35m[1mConsolidate compiler generated dependencies of target footprint_tf_broadcaster[0m
+[0.089s] [ 50%] Built target stabilized_tf_broadcaster
+[0.102s] [ 75%] [32mBuilding CXX object CMakeFiles/footprint_tf_broadcaster.dir/src/footprint_tf_broadcaster.cpp.o[0m
+[5.420s] [100%] [32m[1mLinking CXX executable footprint_tf_broadcaster[0m
+[5.726s] [100%] Built target footprint_tf_broadcaster
+[5.739s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '0': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[5.770s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav
+[5.779s] -- Install configuration: ""
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/package_run_dependencies/drone_nav
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/parent_prefix_path/drone_nav
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/ament_prefix_path.sh
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/ament_prefix_path.dsv
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/path.sh
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/path.dsv
+[5.779s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.bash
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.sh
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.zsh
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.dsv
+[5.780s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.dsv
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/packages/drone_nav
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/cmake/drone_navConfig.cmake
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/cmake/drone_navConfig-version.cmake
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.xml
+[5.780s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/stabilized_tf_broadcaster
+[5.780s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/footprint_tf_broadcaster
+[5.784s] -- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/footprint_tf_broadcaster" to ""
+[5.785s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src
+[5.785s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src/stabilized_tf_broadcaster.cpp
+[5.785s] -- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src/footprint_tf_broadcaster.cpp
+[5.785s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/launch
+[5.785s] -- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/launch/navigation.launch.py
+[5.787s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '0': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav

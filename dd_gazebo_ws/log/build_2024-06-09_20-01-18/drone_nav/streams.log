@@ -1,0 +1,17 @@
+[0.068s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[0.127s] [35m[1mConsolidate compiler generated dependencies of target footprint_tf_broadcaster[0m
+[0.127s] [35m[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster[0m
+[0.127s] [35m[1mConsolidate compiler generated dependencies of target odom_publisher_broadcaster[0m
+[0.141s] [ 50%] Built target footprint_tf_broadcaster
+[0.141s] [ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[0.149s] [ 66%] [32mBuilding CXX object CMakeFiles/odom_publisher_broadcaster.dir/src/odom_publisher_broadcaster.cpp.o[0m
+[6.788s] [ 83%] [32m[1mLinking CXX executable stabilized_tf_broadcaster[0m
+[7.217s] [ 83%] Built target stabilized_tf_broadcaster
+[8.472s] [100%] [32m[1mLinking CXX executable odom_publisher_broadcaster[0m
+[8.923s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[8.923s] (.text+0x1b): undefined reference to `main'
+[8.959s] collect2: error: ld returned 1 exit status
+[8.960s] gmake[2]: *** [CMakeFiles/odom_publisher_broadcaster.dir/build.make:222: odom_publisher_broadcaster] Error 1
+[8.961s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/odom_publisher_broadcaster.dir/all] Error 2
+[8.961s] gmake: *** [Makefile:146: all] Error 2
+[8.962s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '2': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8

@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:[m[K In member function ‘[01m[Kvoid StabilizedBroadcaster::tf_sub_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:15:5:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   15 |     [01;35m[Kmsg[m[K;
+      |     [01;35m[K^~~[m[K
+[100%] [32m[1mLinking CXX executable stabilized_tf_broadcaster[0m
+[100%] Built target stabilized_tf_broadcaster
+-- Install configuration: ""
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/package_run_dependencies/drone_nav
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/parent_prefix_path/drone_nav
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/ament_prefix_path.sh
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/path.sh
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/path.dsv
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.bash
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.sh
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.zsh
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.dsv
+-- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.dsv
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/packages/drone_nav
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/cmake/drone_navConfig.cmake
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/cmake/drone_navConfig-version.cmake
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.xml
+-- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/stabilized_tf_broadcaster
+-- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/stabilized_tf_broadcaster" to ""
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src
+-- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src/stabilized_tf_broadcaster.cpp
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/launch
+-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/launch/navigation.launch.py

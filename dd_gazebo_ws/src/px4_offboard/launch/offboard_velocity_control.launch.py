@@ -36,14 +36,17 @@ __author__ = "Braden Wagstaff"
 __contact__ = "braden@arkelectron.com"
 
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess
+from launch.actions import ExecuteProcess, DeclareLaunchArgument
 from launch_ros.actions import Node
+import launch_ros
+from launch.substitutions import Command, LaunchConfiguration
 from ament_index_python.packages import get_package_share_directory
 import os
 
 
 def generate_launch_description():
     package_dir = get_package_share_directory('px4_offboard')
+    nav_pkg = get_package_share_directory('dd_gazebo')
     # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
     return LaunchDescription([
         # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
@@ -78,6 +81,15 @@ def generate_launch_description():
             namespace='',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', [os.path.join(package_dir, 'visualize.rviz')]]
+            arguments=['-d', [os.path.join(package_dir, 'full_drone_config.rviz')]]
         )
     ])
+
+
+        # Node(
+        #     package='robot_localization',
+        #     executable='ekf_node',
+        #     name='ekf_filter_node',
+        #     output='screen',
+        #     parameters=[os.path.join(nav_pkg, 'config/ekf.yaml'), {'use_sim_time': True}] # Have to eventually make use_sim_time a launch_configuration and not a hard coded value
+        # ),

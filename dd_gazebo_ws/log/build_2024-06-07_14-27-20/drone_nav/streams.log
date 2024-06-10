@@ -1,0 +1,11 @@
+[0.042s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[0.076s] [35m[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster[0m
+[0.092s] [ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[1.694s] [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:[m[K In member function ‘[01m[Kvoid StabilizedBroadcaster::tf_sub_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[1.694s] [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:33:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kq[m[K’ was not declared in this scope
+[1.694s]    33 |     [01;31m[Kq[m[K.setRPY(roll, pitch, 0.0); //transforming the stabilized base link to be stable in both roll and pitch, but not yaw
+[1.694s]       |     [01;31m[K^[m[K
+[3.180s] gmake[2]: *** [CMakeFiles/stabilized_tf_broadcaster.dir/build.make:76: CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o] Error 1
+[3.180s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/stabilized_tf_broadcaster.dir/all] Error 2
+[3.180s] gmake: *** [Makefile:146: all] Error 2
+[3.182s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8

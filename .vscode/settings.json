@@ -1,8 +1,8 @@
 {
     "files.associations": {
         "queue": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "memory": "cpp"
     },
     "ros.distro": "humble",
-    "cmake.sourceDirectory": "/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo"
 }
