@@ -50,5 +50,5 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY src launch config behavior_trees description
+install(DIRECTORY src launch config behavior_tree description
   DESTINATION share/${PROJECT_NAME})

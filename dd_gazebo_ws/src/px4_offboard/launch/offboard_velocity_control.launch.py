@@ -81,7 +81,7 @@ def generate_launch_description():
             namespace='',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', [os.path.join(package_dir, 'full_drone_config.rviz')]]
+            arguments=['-d', [os.path.join(package_dir, 'drone_config.rviz')]]
         )
     ])
 
