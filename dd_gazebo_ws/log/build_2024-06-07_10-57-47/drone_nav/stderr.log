@@ -1,0 +1,9 @@
+[0mCMake Error: Cannot determine link language for target "px4_control_node".[0m
+[0mCMake Error: CMake can not determine linker language for target: px4_control_node[0m
+[0mCMake Error: Cannot determine link language for target "processes".[0m
+[0mCMake Error: CMake can not determine linker language for target: processes[0m
+[0mCMake Error: Cannot determine link language for target "px4_vel_control_node".[0m
+[0mCMake Error: CMake can not determine linker language for target: px4_vel_control_node[0m
+[0mCMake Error: Cannot determine link language for target "px4_visualizer_node".[0m
+[0mCMake Error: CMake can not determine linker language for target: px4_visualizer_node[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m

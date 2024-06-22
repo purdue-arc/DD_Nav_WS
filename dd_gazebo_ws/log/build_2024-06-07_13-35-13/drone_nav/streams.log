@@ -1,0 +1,38 @@
+[0.035s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[0.070s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.170s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.195s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.196s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.201s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.210s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.221s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.265s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.266s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.349s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.459s] -- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)
+[0.460s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.489s] -- Found tf2: 0.25.4 (/opt/ros/humble/share/tf2/cmake)
+[0.495s] -- Found tf2_ros: 0.25.4 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.703s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.751s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.751s] -- Configured cppcheck include dirs: 
+[0.751s] -- Configured cppcheck exclude dirs and/or files: 
+[0.751s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.751s] -- Added test 'lint_cmake' to check CMake code style
+[0.752s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.752s] -- Added test 'uncrustify' to check C / C++ code style
+[0.752s] -- Configured uncrustify additional arguments: 
+[0.752s] -- Added test 'xmllint' to check XML markup files
+[0.754s] -- Configuring done
+[0.762s] -- Generating done
+[0.764s] -- Build files have been written to: /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav
+[0.782s] [35m[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster[0m
+[0.794s] [ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[0.819s] [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kstabilized_tf_broadcaster.hpp: No such file or directory
+[0.819s]     1 | #include [01;31m[K"stabilized_tf_broadcaster.hpp"[m[K
+[0.819s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.819s] compilation terminated.
+[0.820s] gmake[2]: *** [CMakeFiles/stabilized_tf_broadcaster.dir/build.make:76: CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o] Error 1
+[0.820s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/stabilized_tf_broadcaster.dir/all] Error 2
+[0.820s] gmake: *** [Makefile:146: all] Error 2
+[0.823s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8

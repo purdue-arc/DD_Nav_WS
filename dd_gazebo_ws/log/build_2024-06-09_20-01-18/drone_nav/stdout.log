@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target footprint_tf_broadcaster[0m
+[35m[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster[0m
+[35m[1mConsolidate compiler generated dependencies of target odom_publisher_broadcaster[0m
+[ 50%] Built target footprint_tf_broadcaster
+[ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/odom_publisher_broadcaster.dir/src/odom_publisher_broadcaster.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable stabilized_tf_broadcaster[0m
+[ 83%] Built target stabilized_tf_broadcaster
+[100%] [32m[1mLinking CXX executable odom_publisher_broadcaster[0m

@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:[m[K In member function ‘[01m[Kvoid StabilizedBroadcaster::tf_sub_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:33:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kq[m[K’ was not declared in this scope
+   33 |     [01;31m[Kq[m[K.setRPY(roll, pitch, 0.0); //transforming the stabilized base link to be stable in both roll and pitch, but not yaw
+      |     [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/stabilized_tf_broadcaster.dir/build.make:76: CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/stabilized_tf_broadcaster.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

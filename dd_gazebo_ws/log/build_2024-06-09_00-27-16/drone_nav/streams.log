@@ -1,0 +1,19 @@
+[0.043s] Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[0.099s] [ 50%] [32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o[0m
+[0.100s] [ 50%] [32mBuilding CXX object CMakeFiles/footprint_tf_broadcaster.dir/src/footprint_tf_broadcaster.cpp.o[0m
+[0.283s] In file included from [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/footprint_tf_broadcaster.cpp:1[m[K:
+[0.283s] [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/include/drone_nav/footprint_tf_broadcaster.hpp:12:10:[m[K [01;31m[Kfatal error: [m[Kpx4_msgs/msg/sensor_gps.hpp: No such file or directory
+[0.283s]    12 | #include [01;31m[K"px4_msgs/msg/sensor_gps.hpp"[m[K
+[0.283s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.283s] compilation terminated.
+[0.286s] gmake[2]: *** [CMakeFiles/footprint_tf_broadcaster.dir/build.make:76: CMakeFiles/footprint_tf_broadcaster.dir/src/footprint_tf_broadcaster.cpp.o] Error 1
+[0.286s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/footprint_tf_broadcaster.dir/all] Error 2
+[0.286s] gmake[1]: *** Waiting for unfinished jobs....
+[2.079s] [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:[m[K In member function ‘[01m[Kvoid StabilizedBroadcaster::tf_sub_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >)[m[K’:
+[2.079s] [01m[K/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav/src/stabilized_tf_broadcaster.cpp:20:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktemp_var[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[2.079s]    20 |     auto [01;35m[Ktemp_var[m[K = msg->header.stamp;
+[2.079s]       |          [01;35m[K^~~~~~~~[m[K
+[5.759s] [ 75%] [32m[1mLinking CXX executable stabilized_tf_broadcaster[0m
+[6.133s] [ 75%] Built target stabilized_tf_broadcaster
+[6.134s] gmake: *** [Makefile:146: all] Error 2
+[6.136s] Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '2': CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8

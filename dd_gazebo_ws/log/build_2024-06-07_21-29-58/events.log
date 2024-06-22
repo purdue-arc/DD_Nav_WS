@@ -1,0 +1,152 @@
+[0.000000] (-) TimerEvent: {}
+[0.001599] (-) JobUnselected: {'identifier': 'dd_gazebo'}
+[0.002153] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.002361] (-) JobUnselected: {'identifier': 'px4_offboard'}
+[0.002381] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.002398] (drone_nav) JobQueued: {'identifier': 'drone_nav', 'dependencies': OrderedDict([('px4_msgs', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs')])}
+[0.002420] (drone_nav) JobStarted: {'identifier': 'drone_nav'}
+[0.064409] (drone_nav) JobProgress: {'identifier': 'drone_nav', 'progress': 'cmake'}
+[0.065435] (drone_nav) JobProgress: {'identifier': 'drone_nav', 'progress': 'build'}
+[0.065976] (drone_nav) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav', '--', '-j8', '-l8'], 'cwd': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'brc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/brc'), ('OLDPWD', '/home/brc/DD_Nav_WS'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1025'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'brc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'brc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/brc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/brc/.local/bin'), ('SESSION_MANAGER', 'local/BRC-Laptop:@/tmp/.ICE-unix/990,unix/BRC-Laptop:/tmp/.ICE-unix/990'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/037d516f_4e66_40f9_8a4c_358c5f2ead95'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23WAP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.170'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[0.099549] (-) TimerEvent: {}
+[0.148765] (drone_nav) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target footprint_tf_broadcaster\x1b[0m\n'}
+[0.164992] (drone_nav) StdoutLine: {'line': b'[ 50%] Built target stabilized_tf_broadcaster\n'}
+[0.168951] (drone_nav) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/footprint_tf_broadcaster.dir/src/footprint_tf_broadcaster.cpp.o\x1b[0m\n'}
+[0.199637] (-) TimerEvent: {}
+[0.300237] (-) TimerEvent: {}
+[0.401566] (-) TimerEvent: {}
+[0.502254] (-) TimerEvent: {}
+[0.603318] (-) TimerEvent: {}
+[0.704465] (-) TimerEvent: {}
+[0.804962] (-) TimerEvent: {}
+[0.905608] (-) TimerEvent: {}
+[1.006176] (-) TimerEvent: {}
+[1.107160] (-) TimerEvent: {}
+[1.209317] (-) TimerEvent: {}
+[1.310579] (-) TimerEvent: {}
+[1.411519] (-) TimerEvent: {}
+[1.512012] (-) TimerEvent: {}
+[1.612624] (-) TimerEvent: {}
+[1.713061] (-) TimerEvent: {}
+[1.813454] (-) TimerEvent: {}
+[1.914382] (-) TimerEvent: {}
+[2.015465] (-) TimerEvent: {}
+[2.115922] (-) TimerEvent: {}
+[2.216486] (-) TimerEvent: {}
+[2.317296] (-) TimerEvent: {}
+[2.418126] (-) TimerEvent: {}
+[2.518574] (-) TimerEvent: {}
+[2.619296] (-) TimerEvent: {}
+[2.719635] (-) TimerEvent: {}
+[2.819971] (-) TimerEvent: {}
+[2.920494] (-) TimerEvent: {}
+[3.021357] (-) TimerEvent: {}
+[3.123030] (-) TimerEvent: {}
+[3.223938] (-) TimerEvent: {}
+[3.324597] (-) TimerEvent: {}
+[3.425542] (-) TimerEvent: {}
+[3.525961] (-) TimerEvent: {}
+[3.626437] (-) TimerEvent: {}
+[3.726787] (-) TimerEvent: {}
+[3.827195] (-) TimerEvent: {}
+[3.928312] (-) TimerEvent: {}
+[4.029082] (-) TimerEvent: {}
+[4.130079] (-) TimerEvent: {}
+[4.231142] (-) TimerEvent: {}
+[4.331584] (-) TimerEvent: {}
+[4.432025] (-) TimerEvent: {}
+[4.532430] (-) TimerEvent: {}
+[4.632840] (-) TimerEvent: {}
+[4.733267] (-) TimerEvent: {}
+[4.833687] (-) TimerEvent: {}
+[4.934186] (-) TimerEvent: {}
+[5.035593] (-) TimerEvent: {}
+[5.136080] (-) TimerEvent: {}
+[5.236859] (-) TimerEvent: {}
+[5.337822] (-) TimerEvent: {}
+[5.438354] (-) TimerEvent: {}
+[5.539124] (-) TimerEvent: {}
+[5.639529] (-) TimerEvent: {}
+[5.740031] (-) TimerEvent: {}
+[5.840480] (-) TimerEvent: {}
+[5.941215] (-) TimerEvent: {}
+[6.041890] (-) TimerEvent: {}
+[6.142535] (-) TimerEvent: {}
+[6.243169] (-) TimerEvent: {}
+[6.343777] (-) TimerEvent: {}
+[6.444536] (-) TimerEvent: {}
+[6.544962] (-) TimerEvent: {}
+[6.645489] (-) TimerEvent: {}
+[6.746624] (-) TimerEvent: {}
+[6.847227] (-) TimerEvent: {}
+[6.947822] (-) TimerEvent: {}
+[7.048204] (-) TimerEvent: {}
+[7.148775] (-) TimerEvent: {}
+[7.249613] (-) TimerEvent: {}
+[7.350105] (-) TimerEvent: {}
+[7.450479] (-) TimerEvent: {}
+[7.550916] (-) TimerEvent: {}
+[7.651465] (-) TimerEvent: {}
+[7.751885] (-) TimerEvent: {}
+[7.852275] (-) TimerEvent: {}
+[7.952706] (-) TimerEvent: {}
+[8.053438] (-) TimerEvent: {}
+[8.153881] (-) TimerEvent: {}
+[8.255354] (-) TimerEvent: {}
+[8.356117] (-) TimerEvent: {}
+[8.456998] (-) TimerEvent: {}
+[8.558050] (-) TimerEvent: {}
+[8.658482] (-) TimerEvent: {}
+[8.759173] (-) TimerEvent: {}
+[8.860558] (-) TimerEvent: {}
+[8.961498] (-) TimerEvent: {}
+[9.062012] (-) TimerEvent: {}
+[9.162703] (-) TimerEvent: {}
+[9.263670] (-) TimerEvent: {}
+[9.364119] (-) TimerEvent: {}
+[9.464705] (-) TimerEvent: {}
+[9.565182] (-) TimerEvent: {}
+[9.666690] (-) TimerEvent: {}
+[9.767879] (-) TimerEvent: {}
+[9.798340] (drone_nav) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable footprint_tf_broadcaster\x1b[0m\n'}
+[9.868049] (-) TimerEvent: {}
+[9.969074] (-) TimerEvent: {}
+[10.070320] (-) TimerEvent: {}
+[10.171528] (-) TimerEvent: {}
+[10.273259] (-) TimerEvent: {}
+[10.374851] (-) TimerEvent: {}
+[10.475293] (-) TimerEvent: {}
+[10.575868] (-) TimerEvent: {}
+[10.631552] (drone_nav) StdoutLine: {'line': b'[100%] Built target footprint_tf_broadcaster\n'}
+[10.647718] (drone_nav) CommandEnded: {'returncode': 0}
+[10.675419] (drone_nav) JobProgress: {'identifier': 'drone_nav', 'progress': 'install'}
+[10.676026] (-) TimerEvent: {}
+[10.687409] (drone_nav) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav'], 'cwd': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'brc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/brc'), ('OLDPWD', '/home/brc/DD_Nav_WS'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1025'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'brc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'brc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/brc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/brc/.local/bin'), ('SESSION_MANAGER', 'local/BRC-Laptop:@/tmp/.ICE-unix/990,unix/BRC-Laptop:/tmp/.ICE-unix/990'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/037d516f_4e66_40f9_8a4c_358c5f2ead95'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.23WAP2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.170'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[10.701581] (drone_nav) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.702359] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/package_run_dependencies/drone_nav\n'}
+[10.702599] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/parent_prefix_path/drone_nav\n'}
+[10.702705] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/ament_prefix_path.sh\n'}
+[10.702807] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/ament_prefix_path.dsv\n'}
+[10.702942] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/path.sh\n'}
+[10.703073] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/environment/path.dsv\n'}
+[10.703183] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.bash\n'}
+[10.703385] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.sh\n'}
+[10.703512] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.zsh\n'}
+[10.703616] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/local_setup.dsv\n'}
+[10.703728] (drone_nav) StdoutLine: {'line': b'-- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.dsv\n'}
+[10.703839] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/ament_index/resource_index/packages/drone_nav\n'}
+[10.703975] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/cmake/drone_navConfig.cmake\n'}
+[10.704099] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/cmake/drone_navConfig-version.cmake\n'}
+[10.704207] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.xml\n'}
+[10.704353] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/stabilized_tf_broadcaster\n'}
+[10.704953] (drone_nav) StdoutLine: {'line': b'-- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/footprint_tf_broadcaster\n'}
+[10.712135] (drone_nav) StdoutLine: {'line': b'-- Set runtime path of "/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/drone_nav/footprint_tf_broadcaster" to ""\n'}
+[10.712839] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src\n'}
+[10.712979] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src/stabilized_tf_broadcaster.cpp\n'}
+[10.713092] (drone_nav) StdoutLine: {'line': b'-- Installing: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/src/footprint_tf_broadcaster.cpp\n'}
+[10.713203] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/launch\n'}
+[10.713313] (drone_nav) StdoutLine: {'line': b'-- Up-to-date: /home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/launch/navigation.launch.py\n'}
+[10.715697] (drone_nav) CommandEnded: {'returncode': 0}
+[10.776382] (-) TimerEvent: {}
+[10.849187] (drone_nav) JobEnded: {'identifier': 'drone_nav', 'rc': 0}
+[10.850076] (-) EventReactorShutdown: {}

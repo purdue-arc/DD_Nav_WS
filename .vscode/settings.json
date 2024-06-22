@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "queue": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "memory": "cpp"
     },
-    "ros.distro": "humble"
+    "ros.distro": "humble",
 }

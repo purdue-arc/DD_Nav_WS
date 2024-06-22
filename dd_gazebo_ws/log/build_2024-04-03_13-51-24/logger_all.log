@@ -1,0 +1,289 @@
+[0.627s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.627s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x71b5e12d3100>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71b5e14ad870>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71b5e14ad870>>, mixin_verb=('build',))
+[0.659s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.659s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.659s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.659s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.659s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.659s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.659s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/brc/DD_Nav_WS/dd_gazebo_ws'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.668s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'ignore'
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'ignore_ament_install'
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['colcon_pkg']
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'colcon_pkg'
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['colcon_meta']
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'colcon_meta'
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extensions ['ros']
+[0.669s] Level 1:colcon.colcon_core.package_identification:_identify(dd_gazebo) by extension 'ros'
+[0.670s] DEBUG:colcon.colcon_core.package_identification:Package 'dd_gazebo' with type 'ros.ament_cmake' and name 'dd_gazebo'
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.670s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[0.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[0.672s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[0.672s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[0.673s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[0.673s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.673s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.673s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.673s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.673s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.728s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.743s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install
+[0.752s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 354 installed packages in /opt/ros/humble
+[0.752s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.794s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.795s] Level 5:colcon.colcon_core.verb:set package 'dd_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.795s] DEBUG:colcon.colcon_core.verb:Building package 'dd_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo', 'merge_install': False, 'path': '/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.802s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs', 'merge_install': False, 'path': '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[0.810s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.810s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com', 'merge_install': False, 'path': '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[0.817s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.825s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.825s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs' with build type 'ament_cmake'
+[0.825s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs'
+[0.833s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.833s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.833s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.858s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo' with build type 'ament_cmake'
+[0.858s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo'
+[0.866s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.866s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.892s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs
+[0.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo
+[1.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo
+[1.540s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
+[1.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo -- -j8 -l8
+[1.588s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[1.607s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dd_gazebo)
+[1.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/dd_gazebo
+[1.617s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake module files
+[1.617s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake config files
+[1.617s] Level 1:colcon.colcon_core.shell:create_environment_hook('dd_gazebo', 'cmake_prefix_path')
+[1.625s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.ps1'
+[1.625s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.dsv'
+[1.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.sh'
+[1.626s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[1.626s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/pkgconfig/dd_gazebo.pc'
+[1.626s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/python3.10/site-packages'
+[1.627s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[1.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.ps1'
+[1.635s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.dsv'
+[1.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.sh'
+[1.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.bash'
+[1.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.zsh'
+[1.636s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/colcon-core/packages/dd_gazebo)
+[1.658s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dd_gazebo)
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake module files
+[1.666s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo' for CMake config files
+[1.666s] Level 1:colcon.colcon_core.shell:create_environment_hook('dd_gazebo', 'cmake_prefix_path')
+[1.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.ps1'
+[1.675s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.dsv'
+[1.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/hook/cmake_prefix_path.sh'
+[1.675s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[1.675s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/pkgconfig/dd_gazebo.pc'
+[1.675s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/lib/python3.10/site-packages'
+[1.676s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/bin'
+[1.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.ps1'
+[1.684s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.dsv'
+[1.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.sh'
+[1.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.bash'
+[1.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/dd_gazebo/package.zsh'
+[1.685s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo/share/colcon-core/packages/dd_gazebo)
+[3.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs
+[3.126s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs -- -j8 -l8
+[176.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs -- -j8 -l8
+[178.011s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs
+[178.581s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[178.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs
+[178.589s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs' for CMake module files
+[178.590s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs' for CMake config files
+[178.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[178.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[178.599s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[178.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[178.599s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib'
+[178.599s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[178.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[178.607s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[178.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[178.607s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/bin'
+[178.607s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[178.608s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib/python3.10/site-packages'
+[178.608s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/bin'
+[178.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.ps1'
+[178.616s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.dsv'
+[178.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.sh'
+[178.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.bash'
+[178.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.zsh'
+[178.617s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[180.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[180.605s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs' for CMake module files
+[180.605s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs' for CMake config files
+[180.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[180.613s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[180.613s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[180.614s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[180.614s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib'
+[180.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[180.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[180.622s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[180.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[180.622s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/bin'
+[180.622s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[180.622s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib/python3.10/site-packages'
+[180.622s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/bin'
+[180.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.ps1'
+[180.630s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.dsv'
+[180.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.sh'
+[180.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.bash'
+[180.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/px4_msgs/package.zsh'
+[180.631s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[180.631s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com' with build type 'ament_cmake'
+[180.631s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com'
+[180.639s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[180.639s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[180.668s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com
+[181.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com
+[181.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com -- -j8 -l8
+[192.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com -- -j8 -l8
+[192.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com
+[192.376s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[192.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/dd_gazebo/install/dd_gazebo:/opt/ros/humble LD_LIBRARY_PATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_ros_com
+[192.422s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com' for CMake module files
+[192.423s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com' for CMake config files
+[192.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[192.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[192.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[192.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[192.439s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib'
+[192.439s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[192.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[192.449s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[192.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[192.450s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/bin'
+[192.450s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[192.450s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/python3.10/site-packages'
+[192.450s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/bin'
+[192.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[192.458s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[192.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.sh'
+[192.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.bash'
+[192.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[192.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[192.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[192.499s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com' for CMake module files
+[192.499s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com' for CMake config files
+[192.499s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[192.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[192.507s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[192.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[192.507s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib'
+[192.507s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[192.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[192.515s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[192.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[192.515s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/bin'
+[192.515s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[192.515s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib/python3.10/site-packages'
+[192.516s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/bin'
+[192.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[192.523s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[192.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.sh'
+[192.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.bash'
+[192.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[192.524s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[192.524s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[192.525s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[192.525s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[192.525s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[192.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[192.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[192.540s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[192.550s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[192.561s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.ps1'
+[192.561s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/_local_setup_util_ps1.py'
+[192.562s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.ps1'
+[192.572s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.sh'
+[192.573s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/_local_setup_util_sh.py'
+[192.573s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.sh'
+[192.582s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.bash'
+[192.583s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.bash'
+[192.591s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.zsh'
+[192.592s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.zsh'

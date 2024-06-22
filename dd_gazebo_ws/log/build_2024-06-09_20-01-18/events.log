@@ -1,0 +1,117 @@
+[0.000000] (-) TimerEvent: {}
+[0.000387] (-) JobUnselected: {'identifier': 'dd_gazebo'}
+[0.000912] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.001049] (-) JobUnselected: {'identifier': 'px4_offboard'}
+[0.001082] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.001209] (drone_nav) JobQueued: {'identifier': 'drone_nav', 'dependencies': OrderedDict([('px4_msgs', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs'), ('px4_ros_com', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com')])}
+[0.001301] (drone_nav) JobStarted: {'identifier': 'drone_nav'}
+[0.066995] (drone_nav) JobProgress: {'identifier': 'drone_nav', 'progress': 'cmake'}
+[0.067760] (drone_nav) JobProgress: {'identifier': 'drone_nav', 'progress': 'build'}
+[0.068321] (drone_nav) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav', '--', '-j8', '-l8'], 'cwd': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'brc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/lib:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/brc'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '5078'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'brc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'brc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/brc/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/brc/.local/bin'), ('SESSION_MANAGER', 'local/BRC-Laptop:@/tmp/.ICE-unix/1004,unix/BRC-Laptop:/tmp/.ICE-unix/1004'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77e87f65_25ce_43a9_8270_b95b50845dda'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EJD4O2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.428'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard/lib/python3.10/site-packages:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_ros_com:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/dd_gazebo:/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_offboard:/opt/ros/humble')]), 'shell': False}
+[0.100153] (-) TimerEvent: {}
+[0.128573] (drone_nav) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target footprint_tf_broadcaster\x1b[0m\n'}
+[0.128786] (drone_nav) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target stabilized_tf_broadcaster\x1b[0m\n'}
+[0.128837] (drone_nav) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target odom_publisher_broadcaster\x1b[0m\n'}
+[0.142563] (drone_nav) StdoutLine: {'line': b'[ 50%] Built target footprint_tf_broadcaster\n'}
+[0.142822] (drone_nav) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/stabilized_tf_broadcaster.dir/src/stabilized_tf_broadcaster.cpp.o\x1b[0m\n'}
+[0.150072] (drone_nav) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/odom_publisher_broadcaster.dir/src/odom_publisher_broadcaster.cpp.o\x1b[0m\n'}
+[0.200405] (-) TimerEvent: {}
+[0.301157] (-) TimerEvent: {}
+[0.401493] (-) TimerEvent: {}
+[0.501880] (-) TimerEvent: {}
+[0.602330] (-) TimerEvent: {}
+[0.703131] (-) TimerEvent: {}
+[0.804617] (-) TimerEvent: {}
+[0.905711] (-) TimerEvent: {}
+[1.006841] (-) TimerEvent: {}
+[1.107257] (-) TimerEvent: {}
+[1.207758] (-) TimerEvent: {}
+[1.308757] (-) TimerEvent: {}
+[1.409269] (-) TimerEvent: {}
+[1.510004] (-) TimerEvent: {}
+[1.610992] (-) TimerEvent: {}
+[1.711614] (-) TimerEvent: {}
+[1.813144] (-) TimerEvent: {}
+[1.914493] (-) TimerEvent: {}
+[2.015513] (-) TimerEvent: {}
+[2.116312] (-) TimerEvent: {}
+[2.217438] (-) TimerEvent: {}
+[2.318523] (-) TimerEvent: {}
+[2.418993] (-) TimerEvent: {}
+[2.519443] (-) TimerEvent: {}
+[2.619903] (-) TimerEvent: {}
+[2.720265] (-) TimerEvent: {}
+[2.820624] (-) TimerEvent: {}
+[2.921010] (-) TimerEvent: {}
+[3.021399] (-) TimerEvent: {}
+[3.121811] (-) TimerEvent: {}
+[3.222198] (-) TimerEvent: {}
+[3.322742] (-) TimerEvent: {}
+[3.423140] (-) TimerEvent: {}
+[3.523605] (-) TimerEvent: {}
+[3.624058] (-) TimerEvent: {}
+[3.724395] (-) TimerEvent: {}
+[3.824858] (-) TimerEvent: {}
+[3.925303] (-) TimerEvent: {}
+[4.025703] (-) TimerEvent: {}
+[4.126284] (-) TimerEvent: {}
+[4.226769] (-) TimerEvent: {}
+[4.327138] (-) TimerEvent: {}
+[4.427646] (-) TimerEvent: {}
+[4.528174] (-) TimerEvent: {}
+[4.628556] (-) TimerEvent: {}
+[4.728924] (-) TimerEvent: {}
+[4.829267] (-) TimerEvent: {}
+[4.929641] (-) TimerEvent: {}
+[5.030075] (-) TimerEvent: {}
+[5.130412] (-) TimerEvent: {}
+[5.230897] (-) TimerEvent: {}
+[5.331313] (-) TimerEvent: {}
+[5.431760] (-) TimerEvent: {}
+[5.532073] (-) TimerEvent: {}
+[5.632476] (-) TimerEvent: {}
+[5.732891] (-) TimerEvent: {}
+[5.833245] (-) TimerEvent: {}
+[5.933541] (-) TimerEvent: {}
+[6.033885] (-) TimerEvent: {}
+[6.134242] (-) TimerEvent: {}
+[6.234622] (-) TimerEvent: {}
+[6.334957] (-) TimerEvent: {}
+[6.435470] (-) TimerEvent: {}
+[6.535886] (-) TimerEvent: {}
+[6.636354] (-) TimerEvent: {}
+[6.736817] (-) TimerEvent: {}
+[6.789665] (drone_nav) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable stabilized_tf_broadcaster\x1b[0m\n'}
+[6.837053] (-) TimerEvent: {}
+[6.937502] (-) TimerEvent: {}
+[7.037873] (-) TimerEvent: {}
+[7.138260] (-) TimerEvent: {}
+[7.218757] (drone_nav) StdoutLine: {'line': b'[ 83%] Built target stabilized_tf_broadcaster\n'}
+[7.238367] (-) TimerEvent: {}
+[7.338996] (-) TimerEvent: {}
+[7.439448] (-) TimerEvent: {}
+[7.539753] (-) TimerEvent: {}
+[7.640240] (-) TimerEvent: {}
+[7.740524] (-) TimerEvent: {}
+[7.841163] (-) TimerEvent: {}
+[7.942284] (-) TimerEvent: {}
+[8.043142] (-) TimerEvent: {}
+[8.143843] (-) TimerEvent: {}
+[8.244253] (-) TimerEvent: {}
+[8.344736] (-) TimerEvent: {}
+[8.445187] (-) TimerEvent: {}
+[8.473113] (drone_nav) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable odom_publisher_broadcaster\x1b[0m\n'}
+[8.545334] (-) TimerEvent: {}
+[8.645625] (-) TimerEvent: {}
+[8.746189] (-) TimerEvent: {}
+[8.846777] (-) TimerEvent: {}
+[8.924113] (drone_nav) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[8.924389] (drone_nav) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[8.946878] (-) TimerEvent: {}
+[8.960302] (drone_nav) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[8.961754] (drone_nav) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/odom_publisher_broadcaster.dir/build.make:222: odom_publisher_broadcaster] Error 1\n'}
+[8.961935] (drone_nav) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/odom_publisher_broadcaster.dir/all] Error 2\n'}
+[8.962127] (drone_nav) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.963684] (drone_nav) CommandEnded: {'returncode': 2}
+[9.033018] (drone_nav) JobEnded: {'identifier': 'drone_nav', 'rc': 2}
+[9.043452] (-) EventReactorShutdown: {}

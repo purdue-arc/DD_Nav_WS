@@ -1,0 +1,163 @@
+[0.660s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'drone_nav']
+[0.660s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['drone_nav'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x76af26017310>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76af261d9120>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76af261d9120>>, mixin_verb=('build',))
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.692s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/brc/DD_Nav_WS/dd_gazebo_ws'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extension 'ignore'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extension 'ignore_ament_install'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extensions ['colcon_pkg']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extension 'colcon_pkg'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extensions ['colcon_meta']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extension 'colcon_meta'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extensions ['ros']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/dd_gazebo) by extension 'ros'
+[0.703s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dd_gazebo' with type 'ros.ament_cmake' and name 'dd_gazebo'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extensions ['ignore', 'ignore_ament_install']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extension 'ignore'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extension 'ignore_ament_install'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extensions ['colcon_pkg']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extension 'colcon_pkg'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extensions ['colcon_meta']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extension 'colcon_meta'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extensions ['ros']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_nav) by extension 'ros'
+[0.704s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone_nav' with type 'ros.ament_cmake' and name 'drone_nav'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[0.704s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['ignore', 'ignore_ament_install']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'ignore'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'ignore_ament_install'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['colcon_pkg']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'colcon_pkg'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['colcon_meta']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'colcon_meta'
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['ros']
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'ros'
+[0.705s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_offboard' with type 'ros.ament_python' and name 'px4_offboard'
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[0.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[0.706s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.706s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.748s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dd_gazebo' in 'src/dd_gazebo'
+[0.748s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'px4_msgs' in 'src/px4_msgs'
+[0.748s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'px4_offboard' in 'src/px4_offboard'
+[0.748s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'px4_ros_com' in 'src/px4_ros_com'
+[0.762s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.778s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 358 installed packages in /opt/ros/humble
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'cmake_args' from command line to 'None'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'cmake_target' from command line to 'None'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'cmake_clean_cache' from command line to 'False'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'cmake_clean_first' from command line to 'False'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'cmake_force_configure' from command line to 'False'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'ament_cmake_args' from command line to 'None'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'catkin_cmake_args' from command line to 'None'
+[0.826s] Level 5:colcon.colcon_core.verb:set package 'drone_nav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.826s] DEBUG:colcon.colcon_core.verb:Building package 'drone_nav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav', 'merge_install': False, 'path': '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav', 'symlink_install': False, 'test_result_base': None}
+[0.835s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.844s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.845s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav' with build type 'ament_cmake'
+[0.845s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/brc/DD_Nav_WS/dd_gazebo_ws/src/drone_nav'
+[0.859s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.859s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.859s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.883s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[1.710s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/drone_nav -- -j8 -l8
+[1.734s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_nav)
+[1.743s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav' for CMake module files
+[1.743s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav' for CMake config files
+[1.743s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_nav', 'cmake_prefix_path')
+[1.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/hook/cmake_prefix_path.ps1'
+[1.751s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/hook/cmake_prefix_path.dsv'
+[1.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/hook/cmake_prefix_path.sh'
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/bin'
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/pkgconfig/drone_nav.pc'
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/lib/python3.10/site-packages'
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/bin'
+[1.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.ps1'
+[1.760s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.dsv'
+[1.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.sh'
+[1.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.bash'
+[1.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/drone_nav/package.zsh'
+[1.762s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/brc/DD_Nav_WS/dd_gazebo_ws/install/drone_nav/share/colcon-core/packages/drone_nav)
+[1.772s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.772s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.772s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[1.772s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.786s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.786s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.786s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.796s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.809s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.ps1'
+[1.811s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/_local_setup_util_ps1.py'
+[1.812s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.ps1'
+[1.822s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.sh'
+[1.822s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/_local_setup_util_sh.py'
+[1.822s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.sh'
+[1.832s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.bash'
+[1.833s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.bash'
+[1.843s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/local_setup.zsh'
+[1.843s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/brc/DD_Nav_WS/dd_gazebo_ws/install/setup.zsh'

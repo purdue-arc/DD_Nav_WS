@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000227] (-) JobUnselected: {'identifier': 'dd_gazebo'}
+[0.000247] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000257] (-) JobUnselected: {'identifier': 'px4_offboard'}
+[0.000266] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000745] (-) EventReactorShutdown: {}

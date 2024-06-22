@@ -1,0 +1,6 @@
+Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs
+Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/brc/DD_Nav_WS/dd_gazebo_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/brc/DD_Nav_WS/dd_gazebo_ws/install/px4_msgs
+Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs -- -j8 -l8
+Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs -- -j8 -l8
+Invoking command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs
+Invoked command in '/home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/brc/DD_Nav_WS/dd_gazebo_ws/build/px4_msgs
