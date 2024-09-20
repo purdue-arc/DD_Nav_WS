@@ -6,7 +6,6 @@
 void CNode::initialize_node(node_t* node, int cost, bool occupied, int heuristic) {
 	set_cost_and_occupancy(node, cost, occupied);
 	set_heuristic(node, heuristic);
-	//hello world
 }
 
 // Returns occupancy of the given node from cost var.
