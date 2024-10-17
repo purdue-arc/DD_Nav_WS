@@ -1,3 +1,6 @@
 [submodule "dd_gazebo_ws/src/px4-ros2-interface-lib"]
 	path = dd_gazebo_ws/src/px4-ros2-interface-lib
 	url = https://github.com/Auterion/px4-ros2-interface-lib
+[submodule "dd_gazebo_ws/src/px4_msgs"]
+	path = dd_gazebo_ws/src/px4_msgs
+	url = https://github.com/PX4/px4_msgs.git
