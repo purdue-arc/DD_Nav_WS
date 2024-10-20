@@ -5,8 +5,7 @@
 
 class SimpleModeBase : public px4_ros2::ModeBase {
 public:
-    explicit CustomMode(rclcpp::Node & node)
-    : ModeBase(node, Settings{"Custom Mode"}) {
+    explicit SimpleModeBase(rclcpp::Node & node) : ModeBase(node, Settings{"Custom Mode"}) {
         // Initialize manual control and rates setpoint
         // _manual_control_input = std::make_shared<px4_ros2::ManualControlInput>(*this);
         // _rates_setpoint = std::make_shared<px4_ros2::RatesSetpointType>(*this);
@@ -14,16 +13,16 @@ public:
 
     void onActivate() override {
         // Logic when mode is activated
-        // RCLCPP_INFO(_node.get_logger(), "CustomMode activated");
+        // RCLCPP_INFO(_node.get_logger(), "SimpleModeBase activated");
     }
 
     void onDeactivate() override {
         // Logic when mode is deactivated
-        // RCLCPP_INFO(_node.get_logger(), "CustomMode deactivated");
+        // RCLCPP_INFO(_node.get_logger(), "SimpleModeBase deactivated");
     }
 
-    void updateSetpoint(const rclcpp::Duration & dt) override {
-        // RCLCPP_INFO(_node.get_logger(), "CustomMode update setpoint");
+    void updateSetpoint(const rclcpp::Duration & dt) {
+        // RCLCPP_INFO(_node.get_logger(), "SimpleModeBase update setpoint");
         // Update thrust and rates setpoints based on manual control input
         // Eigen::Vector3f thrust_sp{0.0F, 0.0F, -_manual_control_input->throttle()};
         // Eigen::Vector3f rates_sp{
@@ -150,7 +149,7 @@ int main(int argc, char ** argv) {
     auto node = std::make_shared<rclcpp::Node>("drone_state_manager_node");
 
     // Create a SimpleModeBase object (required by DroneStateManager)
-    auto mode = std::make_shared<px4_ros2::SimpleModeBase>();
+    auto mode = std::make_shared<SimpleModeBase>();
 
     // Instantiate DroneStateManager with the node and mode objects
     auto drone_state_manager = std::make_shared<DroneStateManager>(*node, *mode);
