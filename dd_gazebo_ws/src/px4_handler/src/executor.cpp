@@ -10,12 +10,14 @@
 
 // make px4_sitl gazebo-classic
 
-
 // source install/setup.bash
 // ros2 launch px4_offboard offboard_velocity_control.launch.py
 // ros2 launch drone_nav navigation.launch.py
 // ros2 run px4_handler executor 
-// ros2 topic pub /signal std_msgs/msg/String "{data: 'A'}"
+
+// ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
+// ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
+
 
 
 class SimpleModeBase : public px4_ros2::ModeBase {
@@ -45,7 +47,7 @@ public:
     // Constructor
     DroneStateManager(rclcpp::Node & node, px4_ros2::ModeBase & owned_mode):
         ModeExecutorBase(node, px4_ros2::ModeExecutorBase::Settings{}, owned_mode, "drone_state_manager"),
-      _node(node)  // Initialize _node in the initializer list
+        _node(node)  // Initialize _node in the initializer list
     {
         // Subscribe to the "signal" topic
         _signal_subscription = _node.create_subscription<std_msgs::msg::String>(
@@ -58,6 +60,7 @@ public:
     enum class State {
         Reset,
         Idle,
+        Arming,
         TakingOff,
         Hovering,
         Landing,
@@ -78,8 +81,8 @@ public:
 private:
     void signalCallback(const std_msgs::msg::String::SharedPtr msg) {
         if (msg->data == "A") {
-            RCLCPP_INFO(_node.get_logger(), "Signal 'A' received, initiating takeoff and hover");
-            runState(State::TakingOff, px4_ros2::Result::Success);
+            RCLCPP_INFO(_node.get_logger(), "Signal 'A' received, initiating arming sequence");
+            runState(State::Arming, px4_ros2::Result::Success);
         } else if (msg->data == "B") {
             RCLCPP_INFO(_node.get_logger(), "Signal 'B' received, initiating landing");
             runState(State::Landing, px4_ros2::Result::Success);
@@ -90,7 +93,7 @@ private:
 
     void runState(State state, px4_ros2::Result previous_result) {
         if (previous_result != px4_ros2::Result::Success) {
-            RCLCPP_ERROR(_node.get_logger(), "State %i: previous state failed: %s", (int)state, resultToString(previous_result));
+            RCLCPP_ERROR(_node.get_logger(), "State %i: previous state failed: %d", (int)state, previous_result);
             return;
         }
 
@@ -99,13 +102,24 @@ private:
                 // Reset logic if needed
                 break;
 
+            case State::Arming:
+                arm([this](px4_ros2::Result result) {
+                    if (result == px4_ros2::Result::Success) {
+                        RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                        runState(State::TakingOff, px4_ros2::Result::Success);
+                    } else {
+                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %d", result);
+                    }
+                });
+                break;
+
             case State::TakingOff:
                 takeoff([this](px4_ros2::Result result) {
                     if (result == px4_ros2::Result::Success) {
                         RCLCPP_INFO(_node.get_logger(), "Takeoff successful, now hovering");
                         // Optionally transition to Hovering state
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Takeoff failed: %s", resultToString(result));
+                        RCLCPP_ERROR(_node.get_logger(), "Takeoff failed: %d", result);
                     }
                 });
                 break;
@@ -116,7 +130,7 @@ private:
                         RCLCPP_INFO(_node.get_logger(), "Landing initiated, waiting until disarmed");
                         runState(State::WaitUntilDisarmed, px4_ros2::Result::Success);
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Landing failed: %s", resultToString(result));
+                        RCLCPP_ERROR(_node.get_logger(), "Landing failed: %d", result);
                     }
                 });
                 break;
@@ -126,7 +140,7 @@ private:
                     if (result == px4_ros2::Result::Success) {
                         RCLCPP_INFO(_node.get_logger(), "Drone disarmed, operation complete");
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Disarm failed: %s", resultToString(result));
+                        RCLCPP_ERROR(_node.get_logger(), "Disarm failed: %d", result);
                     }
                 });
                 break;
@@ -141,7 +155,6 @@ private:
     rclcpp::Node & _node;
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr _signal_subscription;
 };
-
 
 int main(int argc, char ** argv) {
     // Initialize the ROS 2 system
