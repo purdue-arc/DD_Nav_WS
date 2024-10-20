@@ -3,8 +3,13 @@
 #include "px4_ros2/components/mode.hpp"
 #include "std_msgs/msg/string.hpp"
 
+
+// colcon build --executor sequential --packages-select px4_handler
 // ros2 run px4_handler executor 
 // ros2 topic pub /signal std_msgs/msg/String "{data: 'A'}"
+// ros2 launch px4_offboard offboard_velocity_control.launch.py
+// ros2 launch drone_nav navigation.launch.py
+
 
 class SimpleModeBase : public px4_ros2::ModeBase {
 public:
@@ -59,6 +64,7 @@ public:
 
     void onDeactivate(DeactivateReason _reason) override {
         // Node deactivation logic
+        (void)_reason;
         RCLCPP_INFO(_node.get_logger(), "DroneStateManager node deactivated");
     }
 
