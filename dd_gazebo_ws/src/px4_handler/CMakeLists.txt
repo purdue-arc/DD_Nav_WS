@@ -5,15 +5,21 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+
+
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(px4_msgs REQUIRED)
-find_package(px4_ros_com REQUIRED)
+find_package(px4_ros2_cpp REQUIRED)
 
-include_directories(include)
+include_directories(
+  include
+  ${px4_ros2_cpp_INCLUDE_DIRS}
+)
+
 
 add_executable(executor src/executor.cpp)
-ament_target_dependencies(executor rclcpp px4_msgs)
+ament_target_dependencies(executor rclcpp px4_msgs px4_ros2_cpp)
 
 install(TARGETS
   executor

@@ -1,26 +1,24 @@
 #include "rclcpp/rclcpp.hpp"
-#include "px4_msgs/msg/vehicle_status.hpp"
-#include "px4_ros2/state_change_publisher.hpp"
-#include "px4_ros2/mode_executor_base.hpp"
-#include "px4_ros2/goto_setpoint_type.hpp"
-#include <eigen3/Eigen/Dense>
+#include "px4_ros2_cpp/mode_executor_base.hpp"
+#include "px4_ros2_cpp/mode_base.hpp"
 #include "std_msgs/msg/string.hpp"
 
-using namespace px4_msgs::msg;
-
-class MyModeExecutor : public px4_ros2::ModeExecutorBase {
+class DroneStateManager : public px4_ros2::ModeExecutorBase {
 public:
-    MyModeExecutor(rclcpp::Node & node, px4_ros2::ModeBase & owned_mode) : 
-        ModeExecutorBase(node, px4_ros2::ModeExecutorBase::Settings{}, owned_mode),
-        _node(node) {
-        // Subscribe to the "signal_A" and "signal_B" topic
+    DroneStateManager(rclcpp::Node & node)
+    : ModeExecutorBase(node, px4_ros2::ModeExecutorBase::Settings{}),
+      _node(node)
+    {
+        // Subscribe to the "signal" topic
         _signal_subscription = _node.create_subscription<std_msgs::msg::String>(
             "signal", 10,
-            std::bind(&MyModeExecutor::signalCallback, this, std::placeholders::_1));
+            std::bind(&DroneStateManager::signalCallback, this, std::placeholders::_1));
+
+        RCLCPP_INFO(_node.get_logger(), "DroneStateManager activated, waiting for signals 'A' or 'B'");
     }
 
     enum class State {
-        Reset,
+        Idle,
         TakingOff,
         Hovering,
         Landing,
@@ -28,20 +26,25 @@ public:
     };
 
     void onActivate() override {
-        // Default activation doesn't start the takeoff
-        RCLCPP_INFO(_node.get_logger(), "MyModeExecutor activated, waiting for signal 'A' or 'B'");
+        // Node activation logic
+        RCLCPP_INFO(_node.get_logger(), "DroneStateManager node activated");
     }
 
-    void onDeactivate(DeactivateReason reason) override {}
+    void onDeactivate(DeactivateReason reason) override {
+        // Node deactivation logic
+        RCLCPP_INFO(_node.get_logger(), "DroneStateManager node deactivated");
+    }
 
-    // Callback for when a signal is received
+private:
     void signalCallback(const std_msgs::msg::String::SharedPtr msg) {
         if (msg->data == "A") {
-            RCLCPP_INFO(_node.get_logger(), "Signal 'A' received, switching to takeoff and hover mode");
+            RCLCPP_INFO(_node.get_logger(), "Signal 'A' received, initiating takeoff and hover");
             runState(State::TakingOff, px4_ros2::Result::Success);
         } else if (msg->data == "B") {
-            RCLCPP_INFO(_node.get_logger(), "Signal 'B' received, switching to landing mode");
+            RCLCPP_INFO(_node.get_logger(), "Signal 'B' received, initiating landing");
             runState(State::Landing, px4_ros2::Result::Success);
+        } else {
+            RCLCPP_WARN(_node.get_logger(), "Unknown signal received: '%s'", msg->data.c_str());
         }
     }
 
@@ -53,33 +56,48 @@ public:
 
         switch (state) {
             case State::Reset:
+                // Reset logic if needed
                 break;
 
             case State::TakingOff:
-                // Takeoff and then transition to hovering state
-                takeoff([this](px4_ros2::Result result) { runState(State::Hovering, result); });
-                break;
-
-            case State::Hovering:
-                // Hovering in place after takeoff
-                RCLCPP_INFO(_node.get_logger(), "Drone is hovering...");
+                takeoff([this](px4_ros2::Result result) {
+                    if (result == px4_ros2::Result::Success) {
+                        RCLCPP_INFO(_node.get_logger(), "Takeoff successful, now hovering");
+                        // Optionally transition to Hovering state
+                    } else {
+                        RCLCPP_ERROR(_node.get_logger(), "Takeoff failed: %s", resultToString(result));
+                    }
+                });
                 break;
 
             case State::Landing:
-                // Land the drone when signal "B" is received
-                land([this](px4_ros2::Result result) { runState(State::WaitUntilDisarmed, result); });
+                land([this](px4_ros2::Result result) {
+                    if (result == px4_ros2::Result::Success) {
+                        RCLCPP_INFO(_node.get_logger(), "Landing initiated, waiting until disarmed");
+                        runState(State::WaitUntilDisarmed, px4_ros2::Result::Success);
+                    } else {
+                        RCLCPP_ERROR(_node.get_logger(), "Landing failed: %s", resultToString(result));
+                    }
+                });
                 break;
 
             case State::WaitUntilDisarmed:
                 waitUntilDisarmed([this](px4_ros2::Result result) {
-                    RCLCPP_INFO(_node.get_logger(), "All states complete (%s)", resultToString(result));
+                    if (result == px4_ros2::Result::Success) {
+                        RCLCPP_INFO(_node.get_logger(), "Drone disarmed, operation complete");
+                    } else {
+                        RCLCPP_ERROR(_node.get_logger(), "Disarm failed: %s", resultToString(result));
+                    }
                 });
+                break;
+
+            default:
+                RCLCPP_WARN(_node.get_logger(), "Unknown state");
                 break;
         }
     }
 
-private:
+    // Class members
     rclcpp::Node & _node;
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr _signal_subscription;
 };
-
