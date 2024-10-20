@@ -5,10 +5,17 @@
 
 
 // colcon build --executor sequential --packages-select px4_handler
-// ros2 run px4_handler executor 
-// ros2 topic pub /signal std_msgs/msg/String "{data: 'A'}"
+
+// MicroXRCEAgent udp4 -p 8888
+
+// make px4_sitl gazebo-classic
+
+
+// source install/setup.bash
 // ros2 launch px4_offboard offboard_velocity_control.launch.py
 // ros2 launch drone_nav navigation.launch.py
+// ros2 run px4_handler executor 
+// ros2 topic pub /signal std_msgs/msg/String "{data: 'A'}"
 
 
 class SimpleModeBase : public px4_ros2::ModeBase {
