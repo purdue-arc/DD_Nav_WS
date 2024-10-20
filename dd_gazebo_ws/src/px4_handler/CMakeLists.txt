@@ -11,6 +11,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(px4_msgs REQUIRED)
 find_package(px4_ros2_cpp REQUIRED)
+find_package(std_msgs REQUIRED)
 
 include_directories(
   include
@@ -19,7 +20,13 @@ include_directories(
 
 
 add_executable(executor src/executor.cpp)
-ament_target_dependencies(executor rclcpp px4_msgs px4_ros2_cpp)
+ament_target_dependencies(
+  executor
+  rclcpp
+  px4_msgs
+  px4_ros2_cpp
+  std_msgs
+)
 
 install(TARGETS
   executor
