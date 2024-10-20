@@ -93,7 +93,7 @@ private:
 
     void runState(State state, px4_ros2::Result previous_result) {
         if (previous_result != px4_ros2::Result::Success) {
-            RCLCPP_ERROR(_node.get_logger(), "State %i: previous state failed: %d", (int)state, previous_result);
+            RCLCPP_ERROR(_node.get_logger(), "State %i: previous state failed: %s", (int)state, resultToString(previous_result));
             return;
         }
 
@@ -108,7 +108,7 @@ private:
                         RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
                         runState(State::TakingOff, px4_ros2::Result::Success);
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %d", result);
+                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
                     }
                 });
                 break;
@@ -119,7 +119,7 @@ private:
                         RCLCPP_INFO(_node.get_logger(), "Takeoff successful, now hovering");
                         // Optionally transition to Hovering state
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Takeoff failed: %d", result);
+                        RCLCPP_ERROR(_node.get_logger(), "Takeoff failed: %s", resultToString(result));
                     }
                 });
                 break;
@@ -130,7 +130,7 @@ private:
                         RCLCPP_INFO(_node.get_logger(), "Landing initiated, waiting until disarmed");
                         runState(State::WaitUntilDisarmed, px4_ros2::Result::Success);
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Landing failed: %d", result);
+                        RCLCPP_ERROR(_node.get_logger(), "Landing failed: %s", resultToString(result));
                     }
                 });
                 break;
@@ -140,7 +140,7 @@ private:
                     if (result == px4_ros2::Result::Success) {
                         RCLCPP_INFO(_node.get_logger(), "Drone disarmed, operation complete");
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Disarm failed: %d", result);
+                        RCLCPP_ERROR(_node.get_logger(), "Disarm failed: %s", resultToString(result));
                     }
                 });
                 break;
