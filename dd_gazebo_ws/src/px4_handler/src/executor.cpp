@@ -149,7 +149,7 @@ int main(int argc, char ** argv) {
     auto node = std::make_shared<rclcpp::Node>("drone_state_manager_node");
 
     // Create a SimpleModeBase object (required by DroneStateManager)
-    auto mode = std::make_shared<SimpleModeBase>();
+    auto mode = std::make_shared<SimpleModeBase>(*node);
 
     // Instantiate DroneStateManager with the node and mode objects
     auto drone_state_manager = std::make_shared<DroneStateManager>(*node, *mode);
