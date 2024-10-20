@@ -3,47 +3,36 @@
 #include "px4_ros2/components/mode.hpp"
 #include "std_msgs/msg/string.hpp"
 
+// ros2 run px4_handler executor 
+// ros2 topic pub /signal std_msgs/msg/String "{data: 'A'}"
+
 class SimpleModeBase : public px4_ros2::ModeBase {
 public:
-    explicit SimpleModeBase(rclcpp::Node & node) : ModeBase(node, Settings{"Custom Mode"}) {
-        // Initialize manual control and rates setpoint
-        // _manual_control_input = std::make_shared<px4_ros2::ManualControlInput>(*this);
-        // _rates_setpoint = std::make_shared<px4_ros2::RatesSetpointType>(*this);
+    explicit SimpleModeBase(rclcpp::Node & node):
+        ModeBase(node, Settings{"Custom Mode"}),
+        _node(node)
+    {
+        RCLCPP_INFO(_node.get_logger(), "SimpleModeBase initialized");
     }
 
     void onActivate() override {
         // Logic when mode is activated
-        // RCLCPP_INFO(_node.get_logger(), "SimpleModeBase activated");
+        RCLCPP_INFO(_node.get_logger(), "SimpleModeBase activated");
     }
 
     void onDeactivate() override {
         // Logic when mode is deactivated
-        // RCLCPP_INFO(_node.get_logger(), "SimpleModeBase deactivated");
+        RCLCPP_INFO(_node.get_logger(), "SimpleModeBase deactivated");
     }
-
-    void updateSetpoint(const rclcpp::Duration & dt) {
-        // RCLCPP_INFO(_node.get_logger(), "SimpleModeBase update setpoint");
-        // Update thrust and rates setpoints based on manual control input
-        // Eigen::Vector3f thrust_sp{0.0F, 0.0F, -_manual_control_input->throttle()};
-        // Eigen::Vector3f rates_sp{
-        //     _manual_control_input->roll() * 150.0F * M_PI / 180.0F,
-        //     -_manual_control_input->pitch() * 150.0F * M_PI / 180.0F,
-        //     _manual_control_input->yaw() * 100.0F * M_PI / 180.0F
-        // };
-
-        // _rates_setpoint->update(rates_sp, thrust_sp);
-    }
-
 private:
-    // std::shared_ptr<px4_ros2::ManualControlInput> _manual_control_input;
-    // std::shared_ptr<px4_ros2::RatesSetpointType> _rates_setpoint;
+    rclcpp::Node & _node;
 };
 
 class DroneStateManager : public px4_ros2::ModeExecutorBase {
 public:
     // Constructor
-    DroneStateManager(rclcpp::Node & node, px4_ros2::ModeBase & owned_mode)
-    : ModeExecutorBase(node, px4_ros2::ModeExecutorBase::Settings{}, owned_mode, "drone_state_manager"),
+    DroneStateManager(rclcpp::Node & node, px4_ros2::ModeBase & owned_mode):
+        ModeExecutorBase(node, px4_ros2::ModeExecutorBase::Settings{}, owned_mode, "drone_state_manager"),
       _node(node)  // Initialize _node in the initializer list
     {
         // Subscribe to the "signal" topic
