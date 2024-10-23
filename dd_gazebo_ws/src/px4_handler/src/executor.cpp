@@ -103,12 +103,20 @@ private:
                 break;
 
             case State::Arming:
-                arm([this](px4_ros2::Result result) {
+                // Set offboard mode first
+                offboard([this](px4_ros2::Result result) {
                     if (result == px4_ros2::Result::Success) {
-                        RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
-                        runState(State::TakingOff, px4_ros2::Result::Success);
+                        RCLCPP_INFO(_node.get_logger(), "Offboard mode set, now arming");
+                        arm([this](px4_ros2::Result result) {
+                            if (result == px4_ros2::Result::Success) {
+                                RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                                runState(State::TakingOff, px4_ros2::Result::Success);
+                            } else {
+                                RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                            }
+                        });
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                        RCLCPP_ERROR(_node.get_logger(), "Failed to set offboard mode: %s", resultToString(result));
                     }
                 });
                 break;
