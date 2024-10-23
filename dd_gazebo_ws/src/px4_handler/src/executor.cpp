@@ -51,7 +51,6 @@ public:
         _node(node)  // Initialize _node in the initializer list
     {
 
-        setpoint_timer_ = nullptr;
         arming_timer_ = nullptr;
 
         // Subscribe to the "signal" topic
@@ -109,8 +108,6 @@ private:
 
             case State::Arming:
                 RCLCPP_INFO(_node.get_logger(), "Starting setpoint publishing...");
-                // Start publishing setpoints
-                setpoint_timer_->reset();
 
                 // Wait for a short duration before switching to OFFBOARD mode
                 arming_timer_ = _node.create_wall_timer(
@@ -179,7 +176,6 @@ private:
     // Class members
     rclcpp::Node & _node;
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr _signal_subscription;
-    rclcpp::TimerBase::SharedPtr setpoint_timer_;  // Declare setpoint timer
     rclcpp::TimerBase::SharedPtr arming_timer_;    // Declare arming timer
 };
 
