@@ -4,19 +4,20 @@
 #include "std_msgs/msg/string.hpp"
 
 
-// colcon build --executor sequential --packages-select px4_handler
+// cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && colcon build --executor sequential --packages-select px4_handler && source install/setup.bash
 
 // MicroXRCEAgent udp4 -p 8888
 
 // cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic
 
-// cd ~/Dev/DD_NAV_WS/dd_gazebo && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py
-// cd ~/Dev/DD_NAV_WS/dd_gazebo && source install/setup.bash && ros2 launch drone_nav navigation.launch.py
+// cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py
+// cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch drone_nav navigation.launch.py
 
-// cd ~/Dev/DD_NAV_WS/dd_gazebo && source install/setup.bash && ros2 run px4_handler executor 
+// cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 run px4_handler executor 
 
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
+// ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'C'}"
 
 
 
@@ -103,12 +104,19 @@ private:
                 break;
 
             case State::Arming:
-                arm([this](px4_ros2::Result result) {
+                waitReadyToArm([this](px4_ros2::Result result) {
                     if (result == px4_ros2::Result::Success) {
-                        RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
-                        runState(State::TakingOff, px4_ros2::Result::Success);
+                        RCLCPP_INFO(_node.get_logger(), "Ready to arm, arming now");
+                        arm([this](px4_ros2::Result result) {
+                            if (result == px4_ros2::Result::Success) {
+                                RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                                runState(State::TakingOff, px4_ros2::Result::Success);
+                            } else {
+                                RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                            }
+                        });
                     } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                        RCLCPP_ERROR(_node.get_logger(), "Not ready to arm: %s", resultToString(result));
                     }
                 });
                 break;
