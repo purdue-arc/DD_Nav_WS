@@ -107,7 +107,7 @@ private:
                 break;
 
             case State::Arming:
-                RCLCPP_INFO(_node.get_logger(), "Starting setpoint publishing...");
+                RCLCPP_INFO(_node.get_logger(), "Beginning arming sequence");
 
                 // Wait for a short duration before switching to OFFBOARD mode
                 arming_timer_ = _node.create_wall_timer(
@@ -116,7 +116,7 @@ private:
                         // Switch to OFFBOARD mode
                         waitReadyToArm([this](px4_ros2::Result result) {
                             if (result == px4_ros2::Result::Success) {
-                                RCLCPP_INFO(_node.get_logger(), "Offboard mode set, now arming");
+                                RCLCPP_INFO(_node.get_logger(), "Ready to arm, arming now...");
                                 arm([this](px4_ros2::Result result) {
                                     if (result == px4_ros2::Result::Success) {
                                         RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
