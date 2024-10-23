@@ -8,12 +8,12 @@
 
 // MicroXRCEAgent udp4 -p 8888
 
-// make px4_sitl gazebo-classic
+// cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic
 
-// source install/setup.bash
-// ros2 launch px4_offboard offboard_velocity_control.launch.py
-// ros2 launch drone_nav navigation.launch.py
-// ros2 run px4_handler executor 
+// cd ~/Dev/DD_NAV_WS/dd_gazebo && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py
+// cd ~/Dev/DD_NAV_WS/dd_gazebo && source install/setup.bash && ros2 launch drone_nav navigation.launch.py
+
+// cd ~/Dev/DD_NAV_WS/dd_gazebo && source install/setup.bash && ros2 run px4_handler executor 
 
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
@@ -54,7 +54,7 @@ public:
             "signal", 10,
             std::bind(&DroneStateManager::signalCallback, this, std::placeholders::_1));
 
-        RCLCPP_INFO(_node.get_logger(), "DroneStateManager activated, waiting for signals 'A' or 'B'");
+        RCLCPP_INFO(_node.get_logger(), "DroneStateManager activated, waiting for signals 'A', 'B', 'C'");
     }
 
     enum class State {
