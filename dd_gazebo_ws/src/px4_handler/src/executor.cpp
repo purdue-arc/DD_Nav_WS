@@ -50,6 +50,10 @@ public:
         ModeExecutorBase(node, px4_ros2::ModeExecutorBase::Settings{}, owned_mode, "drone_state_manager"),
         _node(node)  // Initialize _node in the initializer list
     {
+
+        setpoint_timer_ = nullptr;
+        arming_timer_ = nullptr;
+
         // Subscribe to the "signal" topic
         _signal_subscription = _node.create_subscription<std_msgs::msg::String>(
             "signal", 10,
@@ -113,7 +117,7 @@ private:
                     std::chrono::seconds(2),
                     [this]() {
                         // Switch to OFFBOARD mode
-                        offboard([this](px4_ros2::Result result) {
+                        waitReadyToArm([this](px4_ros2::Result result) {
                             if (result == px4_ros2::Result::Success) {
                                 RCLCPP_INFO(_node.get_logger(), "Offboard mode set, now arming");
                                 arm([this](px4_ros2::Result result) {
@@ -175,6 +179,8 @@ private:
     // Class members
     rclcpp::Node & _node;
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr _signal_subscription;
+    rclcpp::TimerBase::SharedPtr setpoint_timer_;  // Declare setpoint timer
+    rclcpp::TimerBase::SharedPtr arming_timer_;    // Declare arming timer
 };
 
 int main(int argc, char ** argv) {
