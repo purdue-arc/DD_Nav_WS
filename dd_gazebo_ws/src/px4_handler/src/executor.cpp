@@ -103,23 +103,35 @@ private:
                 break;
 
             case State::Arming:
-                // Set offboard mode first
-                offboard([this](px4_ros2::Result result) {
-                    if (result == px4_ros2::Result::Success) {
-                        RCLCPP_INFO(_node.get_logger(), "Offboard mode set, now arming");
-                        arm([this](px4_ros2::Result result) {
+                RCLCPP_INFO(_node.get_logger(), "Starting setpoint publishing...");
+                // Start publishing setpoints
+                setpoint_timer_->reset();
+
+                // Wait for a short duration before switching to OFFBOARD mode
+                arming_timer_ = _node.create_wall_timer(
+                    std::chrono::seconds(2),
+                    [this]() {
+                        // Switch to OFFBOARD mode
+                        offboard([this](px4_ros2::Result result) {
                             if (result == px4_ros2::Result::Success) {
-                                RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
-                                runState(State::TakingOff, px4_ros2::Result::Success);
+                                RCLCPP_INFO(_node.get_logger(), "Offboard mode set, now arming");
+                                arm([this](px4_ros2::Result result) {
+                                    if (result == px4_ros2::Result::Success) {
+                                        RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                                        runState(State::TakingOff, px4_ros2::Result::Success);
+                                    } else {
+                                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                                    }
+                                });
                             } else {
-                                RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                                RCLCPP_ERROR(_node.get_logger(), "Failed to set Offboard mode: %s", resultToString(result));
                             }
                         });
-                    } else {
-                        RCLCPP_ERROR(_node.get_logger(), "Failed to set offboard mode: %s", resultToString(result));
-                    }
-                });
+                        // Cancel the arming timer after use
+                        arming_timer_->cancel();
+                    });
                 break;
+
 
             case State::TakingOff:
                 takeoff([this](px4_ros2::Result result) {
