@@ -13,6 +13,8 @@
 // cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py
 // cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch drone_nav navigation.launch.py
 
+// cd ~/Dev && ./QGroundControl.AppImage
+
 // cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 run px4_handler executor 
 
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
@@ -114,19 +116,30 @@ private:
                     std::chrono::seconds(2),
                     [this]() {
                         // Switch to OFFBOARD mode
-                        waitReadyToArm([this](px4_ros2::Result result) {
+                        // waitReadyToArm([this](px4_ros2::Result result) {
+                        //     if (result == px4_ros2::Result::Success) {
+                        //         RCLCPP_INFO(_node.get_logger(), "Ready to arm, arming now...");
+                        //         arm([this](px4_ros2::Result result) {
+                        //             if (result == px4_ros2::Result::Success) {
+                        //                 RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                        //                 runState(State::TakingOff, px4_ros2::Result::Success);
+                        //             } else {
+                        //                 RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                        //             }
+                        //         });
+                        //     } else {
+                        //         RCLCPP_ERROR(_node.get_logger(), "Failed to set Offboard mode: %s", resultToString(result));
+                        //     }
+                        // });
+                        // // Cancel the arming timer after use
+                        // arming_timer_->cancel();
+
+                        arm([this](px4_ros2::Result result) {
                             if (result == px4_ros2::Result::Success) {
-                                RCLCPP_INFO(_node.get_logger(), "Ready to arm, arming now...");
-                                arm([this](px4_ros2::Result result) {
-                                    if (result == px4_ros2::Result::Success) {
-                                        RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
-                                        runState(State::TakingOff, px4_ros2::Result::Success);
-                                    } else {
-                                        RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
-                                    }
-                                });
+                                RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                                runState(State::TakingOff, px4_ros2::Result::Success);
                             } else {
-                                RCLCPP_ERROR(_node.get_logger(), "Failed to set Offboard mode: %s", resultToString(result));
+                                RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
                             }
                         });
                         // Cancel the arming timer after use
