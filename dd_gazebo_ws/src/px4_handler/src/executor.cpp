@@ -134,14 +134,16 @@ private:
                         // // Cancel the arming timer after use
                         // arming_timer_->cancel();
 
-                        arm([this](px4_ros2::Result result) {
-                            if (result == px4_ros2::Result::Success) {
-                                RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
-                                runState(State::TakingOff, px4_ros2::Result::Success);
-                            } else {
-                                RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
-                            }
-                        });
+                        for (int i = 0; i < 100; i++) { 
+                            arm([this](px4_ros2::Result result) {
+                                if (result == px4_ros2::Result::Success) {
+                                    RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
+                                    runState(State::TakingOff, px4_ros2::Result::Success);
+                                } else {
+                                    RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
+                                }
+                            });
+                        }
                         // Cancel the arming timer after use
                         arming_timer_->cancel();
                     });
