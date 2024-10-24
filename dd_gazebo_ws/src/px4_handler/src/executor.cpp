@@ -19,7 +19,6 @@
 
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
 // ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
-// ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'C'}"
 
 
 
@@ -60,7 +59,7 @@ public:
             "signal", 10,
             std::bind(&DroneStateManager::signalCallback, this, std::placeholders::_1));
 
-        RCLCPP_INFO(_node.get_logger(), "DroneStateManager activated, waiting for signals 'A', 'B', 'C'");
+        RCLCPP_INFO(_node.get_logger(), "DroneStateManager activated, waiting for signals 'A'/'B'");
     }
 
     enum class State {
@@ -115,26 +114,7 @@ private:
                 arming_timer_ = _node.create_wall_timer(
                     std::chrono::seconds(2),
                     [this]() {
-                        // Switch to OFFBOARD mode
-                        // waitReadyToArm([this](px4_ros2::Result result) {
-                        //     if (result == px4_ros2::Result::Success) {
-                        //         RCLCPP_INFO(_node.get_logger(), "Ready to arm, arming now...");
-                        //         arm([this](px4_ros2::Result result) {
-                        //             if (result == px4_ros2::Result::Success) {
-                        //                 RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
-                        //                 runState(State::TakingOff, px4_ros2::Result::Success);
-                        //             } else {
-                        //                 RCLCPP_ERROR(_node.get_logger(), "Arming failed: %s", resultToString(result));
-                        //             }
-                        //         });
-                        //     } else {
-                        //         RCLCPP_ERROR(_node.get_logger(), "Failed to set Offboard mode: %s", resultToString(result));
-                        //     }
-                        // });
-                        // // Cancel the arming timer after use
-                        // arming_timer_->cancel();
-
-                        for (int i = 0; i < 100; i++) { 
+                        for (int i = 0; i < 5; i++) { 
                             arm([this](px4_ros2::Result result) {
                                 if (result == px4_ros2::Result::Success) {
                                     RCLCPP_INFO(_node.get_logger(), "Arming successful, proceeding to takeoff");
