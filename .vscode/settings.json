@@ -1,8 +1,10 @@
 {
     "files.associations": {
+        "*.tmpl": "html",
         "queue": "cpp",
         "chrono": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "functional": "cpp"
     },
     "ros.distro": "humble",
 }
