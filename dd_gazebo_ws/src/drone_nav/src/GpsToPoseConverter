@@ -1,0 +1,169 @@
+#include <memory>
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/nav_sat_fix.hpp>
+#include <geometry_msgs/msg/pose_stamped.hpp>
+#include <nav2_msgs/action/navigate_to_pose.hpp>
+#include <rclcpp_action/rclcpp_action.hpp>
+#include <builtin_interfaces/msg/duration.hpp>
+#include <cmath>
+
+using namespace std::placeholders;
+
+class GpsToPoseConverter : public rclcpp::Node
+{
+public:
+    using NavigateToPose = nav2_msgs::action::NavigateToPose;
+    using GoalHandleNavigateToPose = rclcpp_action::ClientGoalHandle<NavigateToPose>;
+
+    GpsToPoseConverter() : Node("gps_to_pose_converter")
+    {
+        // Subscriber to NavSatFix messages
+        gps_subscriber_ = this->create_subscription<sensor_msgs::msg::NavSatFix>(
+            "/gps/fix", 10, std::bind(&GpsToPoseConverter::gpsCallback, this, _1));
+
+        // Action client for NavigateToPose
+        nav_to_pose_client_ = rclcpp_action::create_client<NavigateToPose>(this, "nav2_msgs/action/NavigateToPose.action");
+
+        // Define the GPS origin of the costmap (latitude, longitude, altitude)
+        origin_lat_ = 37.7749;  // Replace with known origin latitude
+        origin_lon_ = -122.4194; // Replace with known origin longitude
+        origin_alt_ = 30.0;      // Replace with known origin altitude
+
+        // Convert the GPS origin to ECEF
+        gpsToECEF(origin_lat_, origin_lon_, origin_alt_, ecef_origin_x_, ecef_origin_y_, ecef_origin_z_);
+    }
+
+private:
+    rclcpp::Subscription<sensor_msgs::msg::NavSatFix>::SharedPtr gps_subscriber_;
+    rclcpp_action::Client<NavigateToPose>::SharedPtr nav_to_pose_client_;
+
+    double origin_lat_, origin_lon_, origin_alt_;
+    double ecef_origin_x_, ecef_origin_y_, ecef_origin_z_;
+
+    void gpsCallback(const sensor_msgs::msg::NavSatFix::SharedPtr msg)
+    {
+        // Log GPS header information
+        RCLCPP_INFO(this->get_logger(), "Received GPS fix at time: %d.%d", msg->header.stamp.sec, msg->header.stamp.nanosec);
+        RCLCPP_INFO(this->get_logger(), "GPS frame_id: %s", msg->header.frame_id.c_str());
+
+        // Convert received GPS to ECEF coordinates
+        double ecef_x, ecef_y, ecef_z;
+        gpsToECEF(msg->latitude, msg->longitude, msg->altitude, ecef_x, ecef_y, ecef_z);
+
+        // Subtract ECEF to get local position in ECEF frame
+        double local_x = ecef_x - ecef_origin_x_;
+        double local_y = ecef_y - ecef_origin_y_;
+        double local_z = ecef_z - ecef_origin_z_;
+
+        // Create a PoseStamped message
+        auto pose_msg = geometry_msgs::msg::PoseStamped();
+        pose_msg.header.frame_id = "map";  // Coordinate frame reference, replace if needed
+        pose_msg.header.stamp = this->now();  // Use the current time as timestamp
+
+        // Set the position part of the Pose
+        pose_msg.pose.position.x = local_x;
+        pose_msg.pose.position.y = local_y;
+        pose_msg.pose.position.z = local_z;
+
+        // Set the orientation part of the Pose (no specific orientation in this case)
+        pose_msg.pose.orientation.x = 0.0;
+        pose_msg.pose.orientation.y = 0.0;
+        pose_msg.pose.orientation.z = 0.0;
+        pose_msg.pose.orientation.w = 1.0;  // No rotation in quaternion form
+
+        // Send goal using NavigateToPose action client
+        sendGoal(pose_msg, "dd_gazebo_ws/src/drone_nav/behavior_tree");
+    }
+
+    void gpsToECEF(double lat, double lon, double alt, double &x, double &y, double &z)
+    {
+        // WGS84 ellipsoid constants
+        const double a = 6378137.0; // semi-major axis in meters
+        const double e2 = 6.69437999014e-3; // first eccentricity squared
+
+        double sin_lat = std::sin(lat * M_PI / 180.0);
+        double cos_lat = std::cos(lat * M_PI / 180.0);
+        double sin_lon = std::sin(lon * M_PI / 180.0);
+        double cos_lon = std::cos(lon * M_PI / 180.0);
+
+        double N = a / std::sqrt(1 - e2 * sin_lat * sin_lat);
+
+        x = (N + alt) * cos_lat * cos_lon;
+        y = (N + alt) * cos_lat * sin_lon;
+        z = ((1 - e2) * N + alt) * sin_lat;
+    }
+
+    void sendGoal(const geometry_msgs::msg::PoseStamped &pose_msg, const std::string &behavior_tree)
+    {
+        if (!nav_to_pose_client_->wait_for_action_server(std::chrono::seconds(10)))
+        {
+            RCLCPP_ERROR(this->get_logger(), "Action server not available after waiting");
+            return;
+        }
+
+        // Create goal message
+        auto goal_msg = NavigateToPose::Goal();
+        goal_msg.pose = pose_msg;
+        goal_msg.behavior_tree = behavior_tree;  // Specify which behavior tree to use
+
+        RCLCPP_INFO(this->get_logger(), "Sending goal with behavior tree: %s", behavior_tree.c_str());
+
+        // Define send goal options, including result callback
+        auto send_goal_options = rclcpp_action::Client<NavigateToPose>::SendGoalOptions();
+        send_goal_options.result_callback = std::bind(&GpsToPoseConverter::goalResultCallback, this, _1);
+        send_goal_options.feedback_callback = std::bind(&GpsToPoseConverter::goalFeedbackCallback, this, _1, _2);
+
+        // Send goal asynchronously
+        nav_to_pose_client_->async_send_goal(goal_msg, send_goal_options);
+    }
+
+    void goalResultCallback(const GoalHandleNavigateToPose::WrappedResult &result)
+    {
+        switch (result.code)
+        {
+        case rclcpp_action::ResultCode::SUCCEEDED:
+            RCLCPP_INFO(this->get_logger(), "Goal succeeded");
+            break;
+        case rclcpp_action::ResultCode::ABORTED:
+            RCLCPP_ERROR(this->get_logger(), "Goal was aborted");
+            break;
+        case rclcpp_action::ResultCode::CANCELED:
+            RCLCPP_ERROR(this->get_logger(), "Goal was canceled");
+            break;
+        default:
+            RCLCPP_ERROR(this->get_logger(), "Unknown result code");
+            break;
+        }
+
+        // Log additional result information
+        RCLCPP_INFO(this->get_logger(), "Result: error_code=%d, error_msg=%s",
+                    result.result->error_code, result.result->error_msg.c_str());
+    }
+
+    void goalFeedbackCallback(
+        GoalHandleNavigateToPose::SharedPtr,
+        const std::shared_ptr<const NavigateToPose::Feedback> feedback)
+    {
+        RCLCPP_INFO(this->get_logger(), "Current pose: [%.2f, %.2f, %.2f]",
+                    feedback->current_pose.pose.position.x,
+                    feedback->current_pose.pose.position.y,
+                    feedback->current_pose.pose.position.z);
+
+        RCLCPP_INFO(this->get_logger(), "Navigation time: %d.%d seconds",
+                    feedback->navigation_time.sec, feedback->navigation_time.nanosec);
+
+        RCLCPP_INFO(this->get_logger(), "Estimated time remaining: %d.%d seconds",
+                    feedback->estimated_time_remaining.sec, feedback->estimated_time_remaining.nanosec);
+
+        RCLCPP_INFO(this->get_logger(), "Number of recoveries: %d", feedback->number_of_recoveries);
+        RCLCPP_INFO(this->get_logger(), "Distance remaining: %.2f meters", feedback->distance_remaining);
+    }
+};
+
+int main(int argc, char **argv)
+{
+    rclcpp::init(argc, argv);
+    rclcpp::spin(std::make_shared<GpsToPoseConverter>());
+    rclcpp::shutdown();
+    return 0;
+}
