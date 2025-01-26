@@ -73,9 +73,11 @@ class OffboardControl(Node):
     def signal_callback(self, msg):
         """Callback function for the signal topic subscriber."""
         if msg.data == 'A':
+            self.get_logger().info("A: Takeoff signal received!!")
             self.offboard_setpoint_counter = 0
             self.goal = Goal.TAKEOFF
         elif msg.data == 'B':
+            self.get_logger().info("B: Land signal received!!")
             self.goal = Goal.LAND
         else:
             self.get_logger().info("Invalid signal received")
@@ -156,6 +158,7 @@ class OffboardControl(Node):
 
         if self.goal == Goal.TAKEOFF:
             if self.offboard_setpoint_counter > 10:
+                self.get_logger().info(f"Takeoff initiated at height {self.vehicle_local_position.z}")
                 self.engage_offboard_mode()
                 self.arm()
             else:
@@ -166,6 +169,7 @@ class OffboardControl(Node):
 
         if self.goal == Goal.LAND:
             # self.vehicle_local_position.z <= self.takeoff_height:
+            self.get_logger().info(f"Land initiated at height {self.vehicle_local_position.z}")
             self.land()
 
 
