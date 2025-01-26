@@ -4,7 +4,29 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
+from std_msgs.msg import String
 
+
+# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && colcon build --executor sequential --packages-select px4_handler && source install/setup.bash
+
+# MicroXRCEAgent udp4 -p 8888
+
+# cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic
+
+# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py
+# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch drone_nav navigation.launch.py
+
+# cd ~/Dev && ./QGroundControl.AppImage
+
+# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 run px4_handler offboard_control 
+
+# ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
+# ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
+
+class Goal:
+    NONE = 0
+    TAKEOFF = 1
+    LAND = 2
 
 class OffboardControl(Node):
     """Node for controlling a vehicle in offboard mode."""
@@ -33,6 +55,11 @@ class OffboardControl(Node):
             VehicleLocalPosition, '/fmu/out/vehicle_local_position', self.vehicle_local_position_callback, qos_profile)
         self.vehicle_status_subscriber = self.create_subscription(
             VehicleStatus, '/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
+        
+        # Handle the signal
+        self.signal_subscriber = self.create_subscription(
+            String, '/signal', self.signal_callback, qos_profile)
+        self.goal = Goal.NONE
 
         # Initialize variables
         self.offboard_setpoint_counter = 0
@@ -42,6 +69,16 @@ class OffboardControl(Node):
 
         # Create a timer to publish control commands
         self.timer = self.create_timer(0.1, self.timer_callback)
+
+    def signal_callback(self, msg):
+        """Callback function for the signal topic subscriber."""
+        if msg.data == 'A':
+            self.offboard_setpoint_counter = 0
+            self.goal = Goal.TAKEOFF
+        elif msg.data == 'B':
+            self.goal = Goal.LAND
+        else:
+            self.get_logger().info("Invalid signal received")
 
     def vehicle_local_position_callback(self, vehicle_local_position):
         """Callback function for vehicle_local_position topic subscriber."""
@@ -117,29 +154,31 @@ class OffboardControl(Node):
         """Callback function for the timer."""
         self.publish_offboard_control_heartbeat_signal()
 
-        if self.offboard_setpoint_counter == 10:
-            self.engage_offboard_mode()
-            self.arm()
+        if self.goal == Goal.TAKEOFF:
+            if self.offboard_setpoint_counter > 10:
+                self.engage_offboard_mode()
+                self.arm()
+            else:
+                self.offboard_setpoint_counter += 1
 
         if self.vehicle_local_position.z > self.takeoff_height and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
             self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
 
-        elif self.vehicle_local_position.z <= self.takeoff_height:
+        if self.goal == Goal.LAND:
+            # self.vehicle_local_position.z <= self.takeoff_height:
             self.land()
-            exit(0)
-
-        if self.offboard_setpoint_counter < 11:
-            self.offboard_setpoint_counter += 1
 
 
 def main(args=None) -> None:
     print('Starting offboard control node...')
+    
     rclpy.init(args=args)
+    
     offboard_control = OffboardControl()
     rclpy.spin(offboard_control)
+    
     offboard_control.destroy_node()
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     try:
