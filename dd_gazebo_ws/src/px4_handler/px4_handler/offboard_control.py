@@ -157,11 +157,11 @@ class OffboardControl(Node):
         self.publish_offboard_control_heartbeat_signal()
 
         if self.goal == Goal.TAKEOFF:
-            if self.offboard_setpoint_counter > 10:
+            if self.offboard_setpoint_counter == 10:
                 self.get_logger().info(f"Takeoff initiated at height {self.vehicle_local_position.z}")
                 self.engage_offboard_mode()
                 self.arm()
-            else:
+            if self.offboard_setpoint_counter < 11: # 11 -> do once more
                 self.offboard_setpoint_counter += 1
 
         if self.vehicle_local_position.z > self.takeoff_height and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
