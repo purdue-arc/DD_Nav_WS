@@ -31,7 +31,7 @@ class Goal:
 
     def __init__(self):
         self.data = 0
-        self.state = NONE
+        self.state = Goal.NONE
 
 
 class OffboardControl(Node):
