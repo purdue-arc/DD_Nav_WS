@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
-from std_msgs.msg import String
+from std_msgs.msg import String, Twist
 
 
 # cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && colcon build --executor sequential --packages-select px4_handler && source install/setup.bash
@@ -65,6 +65,12 @@ class OffboardControl(Node):
         # Handle the signal
         self.signal_subscriber = self.create_subscription(
             String, '/signal', self.signal_callback, qos_profile)
+        
+        # Twist to Trajectory
+        self.twist_subscriber = self.create_subscription(
+            Twist, '/twist', self.twist_callback, qos_profile)
+        
+        # Create a state variable
 
         self.goal = Goal()
 
@@ -89,6 +95,14 @@ class OffboardControl(Node):
             self.goal.state = Goal.LAND
         else:
             self.get_logger().info("Invalid signal received")
+
+    def twist_callback(self, msg):
+        """Callback function for the twist topic subscriber."""
+        self.get_logger().info(f"Received twist signal: {msg}")
+        x = msg.linear.x
+        y = msg.linear.y
+        z = msg.linear.z
+        self.publish_velocity_setpoint(x, y, z)
 
     def vehicle_local_position_callback(self, vehicle_local_position):
         """Callback function for vehicle_local_position topic subscriber."""
@@ -132,14 +146,23 @@ class OffboardControl(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
 
-    def publish_position_setpoint(self, x: float, y: float, z: float):
+    # def publish_position_setpoint(self, x: float, y: float, z: float):
+    #     """Publish the trajectory setpoint."""
+    #     msg = TrajectorySetpoint()
+    #     msg.position = [x, y, z]
+    #     msg.yaw = 1.57079  # (90 degree)
+    #     msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
+    #     self.trajectory_setpoint_publisher.publish(msg)
+    #     self.get_logger().info(f"Publishing position setpoints {[x, y, z]}")
+
+    def publish_velocity_setpoint(self, x: float, y: float, z: float):
         """Publish the trajectory setpoint."""
         msg = TrajectorySetpoint()
-        msg.position = [x, y, z]
+        msg.velocity = [x, y, z]
         msg.yaw = 1.57079  # (90 degree)
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
-        self.get_logger().info(f"Publishing position setpoints {[x, y, z]}")
+        self.get_logger().info(f"Publishing velocity setpoints {[x, y, z]}")
 
     def publish_vehicle_command(self, command, **params) -> None:
         """Publish a vehicle command."""
@@ -178,8 +201,8 @@ class OffboardControl(Node):
                 self.get_logger().info(f"Land initiated at height {self.vehicle_local_position.z}")
                 self.land()
 
-        if self.vehicle_local_position.z > self.takeoff_height and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
-            self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
+        # if self.vehicle_local_position.z > self.takeoff_height and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
+        #     self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
 
 
 def main(args=None) -> None:
