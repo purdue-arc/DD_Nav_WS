@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'example_node = px4_handler.offboard_control:main'
+            'offboard_control = px4_handler.offboard_control:main'
         ],
     },
 )
