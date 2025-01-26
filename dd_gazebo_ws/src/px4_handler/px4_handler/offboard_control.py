@@ -165,15 +165,15 @@ class OffboardControl(Node):
         self.publish_offboard_control_heartbeat_signal()
 
         if self.goal.state == Goal.TAKEOFF:
-            if self.state.data == 10:
+            if self.goal.data == 10:
                 self.get_logger().info(f"Takeoff initiated at height {self.vehicle_local_position.z}")
                 self.engage_offboard_mode()
                 self.arm()
-            if self.state.data < 11: # 11 -> do once more
-                self.state.data += 1
+            if self.goal.data < 11: # 11 -> do once more
+                self.goal.data += 1
         elif self.goal.state == Goal.LAND:
             if self.goal.data == 0:
-                self.state.data = 1
+                self.goal.data = 1
                 # self.vehicle_local_position.z <= self.takeoff_height:
                 self.get_logger().info(f"Land initiated at height {self.vehicle_local_position.z}")
                 self.land()
