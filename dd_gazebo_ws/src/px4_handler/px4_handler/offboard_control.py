@@ -4,7 +4,8 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
-from std_msgs.msg import String, Twist
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
 
 
 # cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && colcon build --executor sequential --packages-select px4_handler && source install/setup.bash
