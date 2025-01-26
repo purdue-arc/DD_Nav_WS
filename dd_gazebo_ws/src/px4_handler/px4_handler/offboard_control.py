@@ -6,24 +6,6 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPo
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
 
 
-# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && colcon build --executor sequential --packages-select px4_handler && source install/setup.bash
-
-# MicroXRCEAgent udp4 -p 8888
-
-# cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic
-
-# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py
-# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch drone_nav navigation.launch.py
-
-# cd ~/Dev && ./QGroundControl.AppImage
-
-# cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 run px4_handler offboard_control 
-
-# ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
-# ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
-
-
-
 class OffboardControl(Node):
     """Node for controlling a vehicle in offboard mode."""
 
