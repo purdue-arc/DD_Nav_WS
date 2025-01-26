@@ -21,4 +21,4 @@ gnome-terminal --tab -- bash -c "cd ~/Dev && ./QGroundControl.AppImage; exec bas
 sleep 1
 
 # Run px4_handler
-gnome-terminal --tab -- bash -c "cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 run px4_handler executor; exec bash"
+gnome-terminal --tab -- bash -c "cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 run px4_handler offboard_control; exec bash"
