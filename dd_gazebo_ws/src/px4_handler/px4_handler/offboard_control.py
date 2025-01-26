@@ -23,10 +23,16 @@ from std_msgs.msg import String
 # ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
 # ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
 
+
 class Goal:
     NONE = 0
     TAKEOFF = 1
     LAND = 2
+
+    def __init__(self):
+        self.data = 0
+        self.state = NONE
+
 
 class OffboardControl(Node):
     """Node for controlling a vehicle in offboard mode."""
@@ -59,10 +65,11 @@ class OffboardControl(Node):
         # Handle the signal
         self.signal_subscriber = self.create_subscription(
             String, '/signal', self.signal_callback, qos_profile)
-        self.goal = Goal.NONE
+
+        self.goal = Goal()
 
         # Initialize variables
-        self.offboard_setpoint_counter = 0
+        # self.offboard_setpoint_counter = 0
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()
         self.takeoff_height = -5.0
@@ -74,11 +81,12 @@ class OffboardControl(Node):
         """Callback function for the signal topic subscriber."""
         if msg.data == 'A':
             self.get_logger().info("A: Takeoff signal received!!")
-            self.offboard_setpoint_counter = 0
-            self.goal = Goal.TAKEOFF
+            self.goal.data = 0
+            self.goal.state = Goal.TAKEOFF
         elif msg.data == 'B':
             self.get_logger().info("B: Land signal received!!")
-            self.goal = Goal.LAND
+            self.goal.data = 0
+            self.goal.state = Goal.LAND
         else:
             self.get_logger().info("Invalid signal received")
 
@@ -156,21 +164,22 @@ class OffboardControl(Node):
         """Callback function for the timer."""
         self.publish_offboard_control_heartbeat_signal()
 
-        if self.goal == Goal.TAKEOFF:
-            if self.offboard_setpoint_counter == 10:
+        if self.goal.state == Goal.TAKEOFF:
+            if self.state.data == 10:
                 self.get_logger().info(f"Takeoff initiated at height {self.vehicle_local_position.z}")
                 self.engage_offboard_mode()
                 self.arm()
-            if self.offboard_setpoint_counter < 11: # 11 -> do once more
-                self.offboard_setpoint_counter += 1
+            if self.state.data < 11: # 11 -> do once more
+                self.state.data += 1
+        elif self.goal.state == Goal.LAND:
+            if self.goal.data = 0:
+                self.state.data = 1
+                # self.vehicle_local_position.z <= self.takeoff_height:
+                self.get_logger().info(f"Land initiated at height {self.vehicle_local_position.z}")
+                self.land()
 
         if self.vehicle_local_position.z > self.takeoff_height and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
             self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
-
-        if self.goal == Goal.LAND:
-            # self.vehicle_local_position.z <= self.takeoff_height:
-            self.get_logger().info(f"Land initiated at height {self.vehicle_local_position.z}")
-            self.land()
 
 
 def main(args=None) -> None:
