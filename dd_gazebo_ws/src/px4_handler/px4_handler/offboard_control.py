@@ -24,6 +24,8 @@ from geometry_msgs.msg import Twist
 # ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'A'}"
 # ros2 topic pub -1 /signal std_msgs/msg/String "{data: 'B'}"
 
+# ros2 topic pub -1 /twist geometry_msgs/msg/Twist "{linear: {x: 0.5, y: 0.0, z: 2.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}"
+
 
 class Goal:
     NONE = 0
