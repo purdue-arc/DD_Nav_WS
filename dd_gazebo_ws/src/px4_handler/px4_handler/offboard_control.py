@@ -172,7 +172,7 @@ class OffboardControl(Node):
             if self.state.data < 11: # 11 -> do once more
                 self.state.data += 1
         elif self.goal.state == Goal.LAND:
-            if self.goal.data = 0:
+            if self.goal.data == 0:
                 self.state.data = 1
                 # self.vehicle_local_position.z <= self.takeoff_height:
                 self.get_logger().info(f"Land initiated at height {self.vehicle_local_position.z}")
