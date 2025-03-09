@@ -148,6 +148,7 @@ class OffboardControl(Node):
         msg.body_rate = False
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
+        print(self.vehicle_status)
 
     # def publish_position_setpoint(self, x: float, y: float, z: float):
     #     """Publish the trajectory setpoint."""

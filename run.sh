@@ -5,11 +5,12 @@ gnome-terminal --tab -- bash -c "MicroXRCEAgent udp4 -p 8888; exec bash"
 sleep 1
 
 # Start PX4 SITL
-gnome-terminal --tab -- bash -c "cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic; exec bash"
+gnome-terminal --tab -- bash -c "cd ~/Dev/PX4-Autopilot && HEADLESS=1 make px4_sitl gazebo-classic gazebo-classic_typhoon_h480__ksql_airport; exec bash"
 sleep 1
 
 # Start ROS2 offboard control
 gnome-terminal --tab -- bash -c "cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch px4_offboard offboard_velocity_control.launch.py; exec bash"
+# gnome-terminal --tab -- bash -c "cd ~/Dev/DD_Nav_WS/dd_gazebo_ws/ && source install/setup.bash && ros2 launch offboard_velocity_control.launch.py; exec bash"
 sleep 1
 
 # Start ROS2 navigation
