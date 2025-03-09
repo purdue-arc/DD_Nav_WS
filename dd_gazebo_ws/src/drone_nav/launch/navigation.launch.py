@@ -16,9 +16,9 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
                                     description='Absolute path to robot urdf file'),
         Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        parameters=[{'robot_description': launch_ros.descriptions.ParameterValue(Command(['xacro ', LaunchConfiguration('model')]), value_type=str), 'use_sim_time': LaunchConfiguration('use_sim_time')}]
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            parameters=[{'robot_description': launch_ros.descriptions.ParameterValue(Command(['xacro ', LaunchConfiguration('model')]), value_type=str), 'use_sim_time': LaunchConfiguration('use_sim_time')}]
         ),
         Node(
             package='drone_nav',

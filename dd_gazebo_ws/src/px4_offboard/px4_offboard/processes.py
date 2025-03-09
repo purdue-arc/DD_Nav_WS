@@ -12,7 +12,8 @@ commands = [
 
     # Run the PX4 SITL simulation
     # "cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic_typhoon_h480__ksql_airport"
-    "cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic_typhoon_h480__empty"
+    # "cd ~/Dev/PX4-Autopilot && make px4_sitl gazebo-classic_typhoon_h480__empty"
+    "cd ~/Dev/PX4-Autopilot && HEADLESS=1 make px4_sitl gazebo-classic_typhoon_h480__ksql_airport"
 
     # Run QGroundControl
     # "cd ~/QGroundControl && ./QGroundControl.AppImage"
